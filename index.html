@@ -3,145 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perbesar Pixel Foto</title>
+<title>Star Tools School</title>
 
 <style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #141e30, #243b55);
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+*{
+  box-sizing:border-box;
 }
 
-.container {
-  background: rgba(0,0,0,0.65);
-  padding: 35px;
-  width: 92%;
-  max-width: 520px;
-  border-radius: 22px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  text-align: center;
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:radial-gradient(circle at top,#2a5298,#0f2027);
+  color:white;
+  min-height:100vh;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+header{
+  text-align:center;
+  padding:30px 15px;
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
-p {
-  font-size: 18px;
-  opacity: 0.85;
-  margin-bottom: 20px;
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
 }
 
-input, select {
-  width: 100%;
-  font-size: 16px;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: none;
+.menu{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:16px;
+  margin-bottom:35px;
 }
 
-button {
-  width: 100%;
-  margin-top: 15px;
-  padding: 14px;
-  font-size: 16px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  background: #00c6ff;
-  color: black;
-  font-weight: bold;
+.menu button{
+  padding:18px;
+  font-size:16px;
+  border:none;
+  border-radius:16px;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ffffff,#eaeaea);
+  color:#1e3c72;
+  font-weight:600;
+  transition:0.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
-button:hover {
-  background: #00a6dd;
+.menu button:hover{
+  transform:translateY(-4px) scale(1.03);
+  background:linear-gradient(135deg,#ffd369,#ffb703);
 }
 
-canvas {
-  margin-top: 25px;
-  max-width: 100%;
-  border-radius: 12px;
+.card{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  padding:28px;
+  border-radius:22px;
+  margin-bottom:30px;
+  display:none;
+  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+  animation:fadeUp 0.4s ease;
 }
 
-.download {
-  display: none;
-  margin-top: 20px;
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(15px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-.footer {
-  margin-top: 25px;
-  font-size: 13px;
-  opacity: 0.6;
+.card h2{
+  text-align:center;
+  margin-bottom:18px;
+  font-weight:600;
+}
+
+input, select{
+  width:100%;
+  padding:15px;
+  margin:10px 0;
+  border-radius:14px;
+  border:none;
+  font-size:15px;
+  outline:none;
+}
+
+.card button{
+  width:100%;
+  padding:15px;
+  margin-top:10px;
+  font-size:17px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ffd369,#ffb703);
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card button:hover{
+  transform:scale(1.02);
+}
+
+.result{
+  margin-top:18px;
+  font-size:20px;
+  text-align:center;
+  font-weight:600;
+  color:#ffeb99;
+}
+
+footer{
+  text-align:center;
+  opacity:0.6;
+  margin:50px 0 15px;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
+<header>Star Tools School</header>
+
 <div class="container">
-  <h1>📸 Perbesar Pixel Foto</h1>
-  <p>Upload foto → jadi lebih tajam</p>
 
-  <input type="file" id="upload" accept="image/*">
+<div class="menu">
+<button onclick="show('persen')">Persen</button>
+<button onclick="show('volume')">Volume</button>
+<button onclick="show('satuan')">Satuan</button>
+<button onclick="show('nilai')">Nilai</button>
+<button onclick="show('rata')">Rata-rata</button>
+<button onclick="show('trigo')">Trigonometri</button>
+</div>
 
-  <select id="scale">
-    <option value="2">2x Pixel</option>
-    <option value="3">3x Pixel</option>
-    <option value="4">4x Pixel</option>
-  </select>
+<div class="card" id="persen">
+<h2>Kalkulator Persen</h2>
+<input type="number" id="angka" placeholder="Angka">
+<input type="number" id="persenVal" placeholder="Persen (%)">
+<button onclick="hitungPersen()">Hitung</button>
+<div class="result" id="hasilPersen"></div>
+</div>
 
-  <button onclick="proses()">Proses Foto</button>
+<div class="card" id="volume">
+<h2>Hitung Volume</h2>
+<select id="bangun">
+<option value="kubus">Kubus</option>
+<option value="balok">Balok</option>
+</select>
+<input type="number" id="sisi" placeholder="Sisi / Panjang">
+<input type="number" id="lebar" placeholder="Lebar">
+<input type="number" id="tinggi" placeholder="Tinggi">
+<button onclick="hitungVolume()">Hitung</button>
+<div class="result" id="hasilVolume"></div>
+</div>
 
-  <canvas id="canvas"></canvas>
+<div class="card" id="satuan">
+<h2>Konversi Panjang</h2>
+<input type="number" id="meter" placeholder="Meter">
+<button onclick="konversi()">Konversi</button>
+<div class="result" id="hasilSatuan"></div>
+</div>
 
-  <div class="download">
-    <a id="download" download="foto-hd.png">
-      <button>⬇ Download Foto</button>
-    </a>
-  </div>
+<div class="card" id="nilai">
+<h2>Konversi Nilai</h2>
+<input type="number" id="nilaiAngka" placeholder="Nilai Angka">
+<button onclick="konversiNilai()">Konversi</button>
+<div class="result" id="hasilNilai"></div>
+</div>
 
-  <div class="footer">
-    © 2026 Foto HD Online
-  </div>
+<div class="card" id="rata">
+<h2>Hitung Rata-rata</h2>
+<input type="text" id="daftarNilai" placeholder="80,75,90">
+<button onclick="rataRata()">Hitung</button>
+<div class="result" id="hasilRata"></div>
+</div>
+
+<div class="card" id="trigo">
+<h2>Trigonometri</h2>
+<input type="number" id="derajat" placeholder="Sudut (derajat)">
+<button onclick="hitungTrigo()">Hitung</button>
+<div class="result" id="hasilTrigo"></div>
+</div>
+
+<footer>© 2026 Star Tools</footer>
 </div>
 
 <script>
-function proses() {
-  const file = document.getElementById("upload").files[0];
-  if (!file) {
-    alert("Upload foto dulu bre!");
-    return;
-  }
+function show(id){
+  document.querySelectorAll('.card').forEach(c=>c.style.display='none');
+  document.getElementById(id).style.display='block';
+}
 
-  const scale = document.getElementById("scale").value;
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
+function hitungPersen(){
+  hasilPersen.innerText = angka.value * persenVal.value / 100;
+}
 
-  const img = new Image();
-  img.onload = function() {
-    canvas.width = img.width * scale;
-    canvas.height = img.height * scale;
+function hitungVolume(){
+  hasilVolume.innerText = bangun.value=="kubus"
+    ? sisi.value**3
+    : sisi.value * lebar.value * tinggi.value;
+}
 
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = "high";
+function konversi(){
+  let m = meter.value;
+  hasilSatuan.innerText = `${m*100} cm | ${m*1000} mm | ${m/1000} km`;
+}
 
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+function konversiNilai(){
+  let n = nilaiAngka.value;
+  hasilNilai.innerText = n>=85?"A":n>=75?"B":n>=65?"C":"D";
+}
 
-    document.getElementById("download").href =
-      canvas.toDataURL("image/png");
+function rataRata(){
+  let arr = daftarNilai.value.split(',').map(Number);
+  let r = arr.reduce((a,b)=>a+b,0)/arr.length;
+  hasilRata.innerText = r.toFixed(2);
+}
 
-    document.querySelector(".download").style.display = "block";
-  };
-
-  img.src = URL.createObjectURL(file);
+function hitungTrigo(){
+  let rad = derajat.value * Math.PI / 180;
+  hasilTrigo.innerText =
+    `sin=${Math.sin(rad).toFixed(4)} | cos=${Math.cos(rad).toFixed(4)} | tan=${Math.tan(rad).toFixed(4)}`;
 }
 </script>
 
