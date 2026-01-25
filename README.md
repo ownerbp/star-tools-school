@@ -1,2 +1,2 @@
 #star tools school 
-Web sederhana untuk memperbesar pixel foto
+Web sederhana untuk menyelesaikan masalah matematika 
