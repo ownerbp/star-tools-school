@@ -3,108 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Star Tools School</title>
+<title>Star Tools School v1.0</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
 body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:radial-gradient(circle at top,#2a5298,#0f2027);
-  color:white;
-  min-height:100vh;
+margin:0;
+font-family:'Poppins',sans-serif;
+background:radial-gradient(circle at top,#2a5298,#0f2027);
+color:white;
+min-height:100vh;
 }
-header{
-  text-align:center;
-  padding:30px 15px;
-  font-size:32px;
-  font-weight:700;
-}
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
-}
+
+header{text-align:center;padding:25px;font-size:30px;font-weight:700}
+
+.container{max-width:1000px;margin:auto;padding:20px}
+
 .hero{
-  text-align:center;
-  padding:35px 20px;
-  margin-bottom:35px;
-  background:rgba(255,255,255,.1);
-  border-radius:22px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 20px 40px rgba(0,0,0,.35);
+text-align:center;
+background:rgba(255,255,255,.12);
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.35)
 }
-.hero h1{
-  color:#ffdd57;
-  margin-bottom:10px;
+
+.hero h1{color:#ffd369}
+
+.badge{
+display:inline-block;
+background:#ffb703;
+color:#000;
+padding:4px 12px;
+border-radius:20px;
+font-size:12px;
+margin-top:10px
 }
-.hero p{
-  font-size:15px;
-  line-height:1.7;
-  opacity:.9;
-}
+
 .menu{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px;
-  margin-bottom:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:12px;
+margin:25px 0
 }
+
 .menu button{
-  padding:16px;
-  border:none;
-  border-radius:16px;
-  font-weight:600;
-  cursor:pointer;
-  background:linear-gradient(135deg,#fff,#eaeaea);
-  color:#1e3c72;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
-  transition:.3s;
+padding:14px;
+border:none;
+border-radius:14px;
+font-weight:600;
+cursor:pointer;
+background:white;
+color:#1e3c72
 }
-.menu button:hover{
-  transform:translateY(-4px);
-  background:linear-gradient(135deg,#ffd369,#ffb703);
-}
+
 .card{
-  display:none;
-  background:rgba(255,255,255,.15);
-  padding:28px;
-  border-radius:22px;
-  margin-bottom:30px;
-  backdrop-filter:blur(12px);
-  box-shadow:0 20px 40px rgba(0,0,0,.35);
+display:none;
+background:rgba(255,255,255,.15);
+padding:25px;
+border-radius:20px;
+margin-bottom:20px
 }
-.card h2{text-align:center;margin-bottom:15px}
+
 input,select{
-  width:100%;
-  padding:14px;
-  margin:8px 0;
-  border:none;
-  border-radius:14px;
-  font-size:15px;
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:12px;
+border:none
 }
+
 .card button{
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:14px;
-  font-weight:700;
-  background:linear-gradient(135deg,#ffd369,#ffb703);
-  cursor:pointer;
+width:100%;
+padding:12px;
+border:none;
+border-radius:12px;
+font-weight:700;
+background:#ffd369
 }
-.result{
-  margin-top:15px;
-  text-align:center;
-  font-size:20px;
-  font-weight:600;
-  color:#ffeb99;
-}
-footer{
-  text-align:center;
-  opacity:.6;
-  margin:40px 0 20px;
-}
+
+.result{text-align:center;margin-top:10px;font-size:18px;color:#ffeb99}
+
+footer{text-align:center;opacity:.6;margin:40px 0}
 </style>
 </head>
 
@@ -115,127 +97,106 @@ footer{
 <div class="container">
 
 <div class="hero">
-  <h1>Selamat Datang di Star Tools School</h1>
-  <p>
+<h1>Selamat Datang di Star Tools School</h1>
 Web ini dibuat untuk mempermudah permasalahan matematika.<br><br>
-
-Web ini dibuat oleh<br>
-<b style="font-size:20px">Bintang Ramadhan</b><br><br>
-
-Jika terdapat kesalahan, mohon berikan laporan.
-</p>
+Web ini dibuat oleh<br><b>Bintang Ramadhan</b><br><br>
+Jika terdapat kesalahan mohon berikan laporan.
+<br><br>
+<a href="https://wa.me/6289618726983" style="color:#ffd369">Laporkan Bug (WhatsApp)</a><br>
+<div class="badge">v1.0</div>
 </div>
 
 <div class="menu">
-  <button onclick="show('persen')">Persen</button>
-  <button onclick="show('volume')">Volume</button>
-  <button onclick="show('satuan')">Satuan</button>
-  <button onclick="show('nilai')">Nilai</button>
-  <button onclick="show('rata')">Rata-rata</button>
-  <button onclick="show('trigo')">Trigonometri</button>
+<button onclick="show('persen')">Persen</button>
+<button onclick="show('volume')">Volume</button>
+<button onclick="show('satuan')">Satuan</button>
+<button onclick="show('nilai')">Nilai</button>
+<button onclick="show('rata')">Rata-rata</button>
+<button onclick="show('trigo')">Trigonometri</button>
+<button onclick="show('peluang')">Peluang</button>
 </div>
 
 <div class="card" id="persen">
-<h2>Kalkulator Persen</h2>
-<input type="number" id="angka" placeholder="Angka">
-<input type="number" id="persenVal" placeholder="Persen (%)">
-<button onclick="hitungPersen()">Hitung</button>
+<h2>Persen</h2>
+<input id="angka" type="number" placeholder="Angka">
+<input id="persenVal" type="number" placeholder="Persen">
+<button onclick="hasilPersen.innerText=angka.value*persenVal.value/100">Hitung</button>
 <div class="result" id="hasilPersen"></div>
 </div>
 
 <div class="card" id="volume">
-<h2>Hitung Volume</h2>
-<select id="bangun">
-  <option value="kubus">Kubus</option>
-  <option value="balok">Balok</option>
-</select>
-<input type="number" id="sisi" placeholder="Sisi / Panjang">
-<input type="number" id="lebar" placeholder="Lebar">
-<input type="number" id="tinggi" placeholder="Tinggi">
-<button onclick="hitungVolume()">Hitung</button>
+<h2>Volume Balok</h2>
+<input id="p" placeholder="Panjang">
+<input id="l" placeholder="Lebar">
+<input id="t" placeholder="Tinggi">
+<button onclick="hasilVolume.innerText=p.value*l.value*t.value">Hitung</button>
 <div class="result" id="hasilVolume"></div>
 </div>
 
 <div class="card" id="satuan">
-<h2>Konversi Panjang</h2>
-<input type="number" id="meter" placeholder="Meter">
-<button onclick="konversi()">Konversi</button>
+<h2>Meter</h2>
+<input id="m" placeholder="Meter">
+<button onclick="hasilSatuan.innerText=m.value*100+' cm | '+m.value*1000+' mm'">Konversi</button>
 <div class="result" id="hasilSatuan"></div>
 </div>
 
 <div class="card" id="nilai">
-<h2>Konversi Nilai</h2>
-<input type="number" id="nilaiAngka" placeholder="Nilai Angka">
-<button onclick="konversiNilai()">Konversi</button>
+<h2>Nilai</h2>
+<input id="n">
+<button onclick="hasilNilai.innerText=n.value>=85?'A':n.value>=75?'B':n.value>=65?'C':'D'">Konversi</button>
 <div class="result" id="hasilNilai"></div>
 </div>
 
 <div class="card" id="rata">
-<h2>Nilai Rata-rata</h2>
-<input type="text" id="daftarNilai" placeholder="80,75,90">
-<button onclick="rataRata()">Hitung</button>
+<h2>Rata-rata</h2>
+<input id="arr" placeholder="80,70,90">
+<button onclick="rata()">Hitung</button>
 <div class="result" id="hasilRata"></div>
 </div>
 
 <div class="card" id="trigo">
 <h2>Trigonometri</h2>
-<input type="number" id="derajat" placeholder="Sudut (°)">
-<button onclick="hitungTrigo()">Hitung</button>
+<input id="deg" placeholder="Sudut">
+<button onclick="trigo()">Hitung</button>
 <div class="result" id="hasilTrigo"></div>
 </div>
 
+<div class="card" id="peluang">
+<h2>Peluang</h2>
+<input id="a" placeholder="Jumlah kejadian">
+<input id="b" placeholder="Total kemungkinan">
+<button onclick="peluang()">Hitung</button>
+<div class="result" id="hasilPeluang"></div>
+</div>
+
 <footer>© 2026 Star Tools School</footer>
+
 </div>
 
 <script>
-function show(id){
-  document.querySelectorAll('.card').forEach(c=>c.style.display='none');
-  document.getElementById(id).style.display='block';
+function show(x){
+document.querySelectorAll('.card').forEach(c=>c.style.display='none');
+document.getElementById(x).style.display='block';
 }
 
-function hitungPersen(){
-  hasilPersen.innerText = angka.value * persenVal.value / 100;
+function rata(){
+let d=arr.value.split(',').map(Number);
+hasilRata.innerText=(d.reduce((x,y)=>x+y,0)/d.length).toFixed(2);
 }
 
-function hitungVolume(){
-  hasilVolume.innerText =
-    bangun.value=="kubus"
-    ? sisi.value**3
-    : sisi.value*lebar.value*tinggi.value;
+function trigo(){
+let d=parseInt(deg.value);
+let t={30:["1/2","√3/2","1/√3"],45:["√2/2","√2/2","1"],60:["√3/2","1/2","√3"]};
+if(t[d]) hasilTrigo.innerText=`sin=${t[d][0]} cos=${t[d][1]} tan=${t[d][2]}`;
+else{
+let r=d*Math.PI/180;
+hasilTrigo.innerText=`sin=${Math.sin(r).toFixed(3)} cos=${Math.cos(r).toFixed(3)} tan=${Math.tan(r).toFixed(3)}`;
+}
 }
 
-function konversi(){
-  let m=meter.value;
-  hasilSatuan.innerText=`${m*100} cm | ${m*1000} mm | ${m/1000} km`;
-}
-
-function konversiNilai(){
-  let n=nilaiAngka.value;
-  hasilNilai.innerText=n>=85?"A":n>=75?"B":n>=65?"C":"D";
-}
-
-function rataRata(){
-  let a=daftarNilai.value.split(',').map(Number);
-  hasilRata.innerText=(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2);
-}
-
-function hitungTrigo(){
-  let d=parseInt(derajat.value);
-  let data={
-    0:{s:"0",c:"1",t:"0"},
-    30:{s:"1/2",c:"√3/2",t:"1/√3"},
-    45:{s:"√2/2",c:"√2/2",t:"1"},
-    60:{s:"√3/2",c:"1/2",t:"√3"},
-    90:{s:"1",c:"0",t:"∞"}
-  };
-  if(data[d]){
-    hasilTrigo.innerText=
-      `sin ${d}°=${data[d].s} | cos ${d}°=${data[d].c} | tan ${d}°=${data[d].t}`;
-  }else{
-    let r=d*Math.PI/180;
-    hasilTrigo.innerText=
-      `sin=${Math.sin(r).toFixed(4)} | cos=${Math.cos(r).toFixed(4)} | tan=${Math.tan(r).toFixed(4)}`;
-  }
+function peluang(){
+let p=(a.value/b.value*100).toFixed(2);
+hasilPeluang.innerText=`P = ${a.value}/${b.value} = ${p}%`;
 }
 </script>
 
