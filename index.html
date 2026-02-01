@@ -3,110 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Star Tools School v1.0</title>
-
+<title>Star Tools School v1.1</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:radial-gradient(circle at top,#2a5298,#0f2027);
-color:white;
-min-height:100vh;
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Poppins',sans-serif;background:radial-gradient(circle at top,#2a5298,#0f2027);color:white;min-height:100vh;}
+header{text-align:center;padding:25px;font-size:30px;font-weight:700;}
+.container{max-width:1000px;margin:auto;padding:20px;}
+.hero{text-align:center;background:rgba(255,255,255,.12);padding:30px;border-radius:20px;margin-bottom:25px;box-shadow:0 15px 35px rgba(0,0,0,.35);}
+.hero h1{color:#ffd369;}
+.badge{display:inline-block;background:#ffb703;color:#000;padding:4px 12px;border-radius:20px;font-size:12px;margin-top:10px;}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:25px 0;}
+.menu button{padding:14px;border:none;border-radius:14px;font-weight:600;cursor:pointer;background:white;color:#1e3c72;}
+.card{display:none;background:rgba(255,255,255,.15);padding:25px;border-radius:20px;margin-bottom:20px;}
+input,select{width:100%;padding:12px;margin:8px 0;border-radius:12px;border:none;}
+.card button{width:100%;padding:12px;border:none;border-radius:12px;font-weight:700;background:#ffd369;cursor:pointer;}
+.result{text-align:center;margin-top:10px;font-size:18px;color:#ffeb99;}
+footer{text-align:center;opacity:.6;margin:40px 0;}
+.label-checkbox{display:flex;align-items:center;margin-top:10px;cursor:pointer;font-size:15px;}
+.label-checkbox input{margin-left:6px;}
+.reset-btn{background:#ff4d4d;color:#fff;margin-top:8px;}
+.sponsor{text-align:center; margin-top:10px; font-size:14px; opacity:0.7;}
+body.light {
+  background: radial-gradient(circle at top,#f0f0f0,#dcdcdc);
+  color: #111;
 }
 
-header{text-align:center;padding:25px;font-size:30px;font-weight:700}
-
-.container{max-width:1000px;margin:auto;padding:20px}
-
-.hero{
-text-align:center;
-background:rgba(255,255,255,.12);
-padding:30px;
-border-radius:20px;
-margin-bottom:25px;
-box-shadow:0 15px 35px rgba(0,0,0,.35)
+body.light .card {
+  background: rgba(255,255,255,0.85);
+  color: #111;
 }
 
-.hero h1{color:#ffd369}
-
-.badge{
-display:inline-block;
-background:#ffb703;
-color:#000;
-padding:4px 12px;
-border-radius:20px;
-font-size:12px;
-margin-top:10px
+body.light .menu button {
+  background: #fff;
+  color: #1e3c72;
 }
 
-.menu{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:12px;
-margin:25px 0
+body.dark {
+  background: radial-gradient(circle at top,#2a5298,#0f2027);
+  color: #fff;
 }
 
-.menu button{
-padding:14px;
-border:none;
-border-radius:14px;
-font-weight:600;
-cursor:pointer;
-background:white;
-color:#1e3c72
+body.dark .card {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
 }
 
-.card{
-display:none;
-background:rgba(255,255,255,.15);
-padding:25px;
-border-radius:20px;
-margin-bottom:20px
+body.dark .menu button {
+  background: #fff;
+  color: #1e3c72;
 }
-
-input,select{
-width:100%;
-padding:12px;
-margin:8px 0;
-border-radius:12px;
-border:none
-}
-
-.card button{
-width:100%;
-padding:12px;
-border:none;
-border-radius:12px;
-font-weight:700;
-background:#ffd369
-}
-
-.result{text-align:center;margin-top:10px;font-size:18px;color:#ffeb99}
-
-footer{text-align:center;opacity:.6;margin:40px 0}
 </style>
 </head>
-
 <body>
 
 <header>Star Tools School</header>
-
 <div class="container">
 
 <div class="hero">
 <h1>Selamat Datang di Star Tools School</h1>
 Web ini dibuat untuk mempermudah permasalahan matematika.<br><br>
 Web ini dibuat oleh<br><b>Bintang Ramadhan</b><br><br>
-Jika terdapat kesalahan mohon berikan laporan.
-<br><br>
-<a href="https://wa.me/6289618726983" style="color:#ffd369">Laporkan Bug (WhatsApp)</a><br>
-<div class="badge">v1.0</div>
+Jika terdapat kesalahan mohon berikan laporan.<br>
+<a href="mailto: zzzbinzz50@gmail.com" style="color:#ffd369">Laporkan Bug (Email)</a><br>
+<div class="badge">v1.1</div>
 </div>
 
-<div class="menu">
+<div style="text-align:center; margin-bottom:15px;">
+  <button id="modeToggle" style="padding:8px 15px; border:none; border-radius:8px; cursor:pointer;">
+     Gelap/Terang
+  </button>
+</div>
+
+<div class="menu"> 
+<button onclick="show('profil')">Profil</button>
+<button onclick="show('kuiz')">Kuiz Sulit</button>
 <button onclick="show('persen')">Persen</button>
 <button onclick="show('volume')">Volume</button>
 <button onclick="show('satuan')">Satuan</button>
@@ -114,91 +85,504 @@ Jika terdapat kesalahan mohon berikan laporan.
 <button onclick="show('rata')">Rata-rata</button>
 <button onclick="show('trigo')">Trigonometri</button>
 <button onclick="show('peluang')">Peluang</button>
+<button onclick="show('linear')">Linear</button>
 </div>
 
+<div class="card" id="profil">
+  <h2>Profil Web</h2>
+  <div class="profil-text">
+    <p><b>Visi:</b> Membantu siswa memahami materi matematika dengan cepat dan interaktif.</p>
+    <p><b>Misi:</b></p>
+    <ul>
+      <li>Menyediakan kalkulator dan tools belajar yang mudah digunakan.</li>
+      <li>Membuat materi matematika lebih menarik dan praktis.</li>
+      <li>Memberikan akses informasi belajar secara cepat untuk semua siswa.</li>
+    </ul>
+    <p>Masukan & saran bisa dikirim via: 
+  <a href="mailto:zzzbinzz50@gmail.com" style="color:#ffd369;">Email</a>
+</p>
+  </div>
+</div>
+
+<style>
+/* Card Profil */
+.profil-text{
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.profil-text ul{
+  padding-left: 20px;
+  margin: 6px 0;
+}
+.profil-text a{
+  text-decoration: none;
+}
+</style>
+
+<div class="card" id="kuiz">
+  <h2>Kuiz Matematika Sulit</h2>
+
+  <!-- Soal 1 -->
+  <div class="soal" id="soal1">
+    <p>1. 3x - 5 = 2x + 7, nilai x?</p>
+    <input type="radio" name="jawab1" value="A"> A. 10<br>
+    <input type="radio" name="jawab1" value="B"> B. 12<br>
+    <input type="radio" name="jawab1" value="C"> C. 8<br>
+    <input type="radio" name="jawab1" value="D"> D. 15<br>
+    <button class="submit" onclick="cekJawaban(1,'B')">Submit</button>
+    <div class="feedback" id="feedback1"></div>
+  </div>
+
+  <!-- Soal 2 -->
+  <div class="soal" id="soal2">
+    <p>2. Kantong 5 bola merah, 3 biru. Ambil 2 sekaligus. Peluang berbeda warna?</p>
+    <input type="radio" name="jawab2" value="A"> A. 1/2<br>
+    <input type="radio" name="jawab2" value="B"> B. 1/3<br>
+    <input type="radio" name="jawab2" value="C"> C. 5/12<br>
+    <input type="radio" name="jawab2" value="D"> D. 7/12<br>
+    <button class="submit" onclick="cekJawaban(2,'C')">Submit</button>
+    <div class="feedback" id="feedback2"></div>
+  </div>
+
+  <!-- Soal 3 -->
+  <div class="soal" id="soal3">
+    <p>3. Jika sin θ = 3/5, maka cos θ dan tan θ?</p>
+    <input type="radio" name="jawab3" value="A"> A. cos θ = 4/5, tan θ = 3/4<br>
+    <input type="radio" name="jawab3" value="B"> B. cos θ = 3/5, tan θ = 4/3<br>
+    <input type="radio" name="jawab3" value="C"> C. cos θ = 1/2, tan θ = 2/1<br>
+    <input type="radio" name="jawab3" value="D"> D. cos θ = 5/3, tan θ = 3/5<br>
+    <button class="submit" onclick="cekJawaban(3,'A')">Submit</button>
+    <div class="feedback" id="feedback3"></div>
+  </div>
+
+  <!-- Soal 4 -->
+  <div class="soal" id="soal4">
+    <p>4. Nilai 5 siswa: 80,85,75,90,95. Rata-rata berbobot nilai tertinggi x1,5?</p>
+    <input type="radio" name="jawab4" value="A"> A. 85<br>
+    <input type="radio" name="jawab4" value="B"> B. 86<br>
+    <input type="radio" name="jawab4" value="C"> C. 87<br>
+    <input type="radio" name="jawab4" value="D"> D. 88<br>
+    <button class="submit" onclick="cekJawaban(4,'D')">Submit</button>
+    <div class="feedback" id="feedback4"></div>
+  </div>
+
+  <!-- Soal 5 -->
+  <div class="soal" id="soal5">
+    <p>5. Balok: panjang 10, lebar 5, tinggi dikurangi 20%, volume baru 360. Tinggi awal?</p>
+    <input type="radio" name="jawab5" value="A"> A. 8<br>
+    <input type="radio" name="jawab5" value="B"> B. 9<br>
+    <input type="radio" name="jawab5" value="C"> C. 10<br>
+    <input type="radio" name="jawab5" value="D"> D. 12<br>
+    <button class="submit" onclick="cekJawaban(5,'B')">Submit</button>
+    <div class="feedback" id="feedback5"></div>
+  </div>
+
+  <!-- Soal 6 -->
+  <div class="soal" id="soal6">
+    <p>6. x² - 5x + 6 = 0. Nilai x?</p>
+    <input type="radio" name="jawab6" value="A"> A. 1 atau 6<br>
+    <input type="radio" name="jawab6" value="B"> B. 3 atau 1<br>
+    <input type="radio" name="jawab6" value="C"> C. 2 atau 3<br>
+    <input type="radio" name="jawab6" value="D"> D. 4 atau 2<br>
+    <button class="submit" onclick="cekJawaban(6,'C')">Submit</button>
+    <div class="feedback" id="feedback6"></div>
+  </div>
+
+  <!-- Soal 7 -->
+  <div class="soal" id="soal7">
+    <p>7. 2^x = 16, x=?</p>
+    <input type="radio" name="jawab7" value="A"> A. 4<br>
+    <input type="radio" name="jawab7" value="B"> B. 3<br>
+    <input type="radio" name="jawab7" value="C"> C. 5<br>
+    <input type="radio" name="jawab7" value="D"> D. 2<br>
+    <button class="submit" onclick="cekJawaban(7,'A')">Submit</button>
+    <div class="feedback" id="feedback7"></div>
+  </div>
+
+  <!-- Soal 8 -->
+  <div class="soal" id="soal8">
+    <p>8. Hitung sin 45° + cos 45°?</p>
+    <input type="radio" name="jawab8" value="A"> A. 1<br>
+    <input type="radio" name="jawab8" value="B"> B. 1,2<br>
+    <input type="radio" name="jawab8" value="C"> C. 1,3<br>
+    <input type="radio" name="jawab8" value="D"> D. √2 ≈ 1,414<br>
+    <button class="submit" onclick="cekJawaban(8,'D')">Submit</button>
+    <div class="feedback" id="feedback8"></div>
+  </div>
+
+  <!-- Soal 9 -->
+  <div class="soal" id="soal9">
+    <p>9. Lempar 2 dadu. Peluang jumlah mata = 7?</p>
+    <input type="radio" name="jawab9" value="A"> A. 1/8<br>
+    <input type="radio" name="jawab9" value="B"> B. 1/6<br>
+    <input type="radio" name="jawab9" value="C"> C. 1/4<br>
+    <input type="radio" name="jawab9" value="D"> D. 1/12<br>
+    <button class="submit" onclick="cekJawaban(9,'B')">Submit</button>
+    <div class="feedback" id="feedback9"></div>
+  </div>
+
+  <!-- Soal 10 -->
+  <div class="soal" id="soal10">
+    <p>10. 2x + 3y = 12, x - y = 2. Nilai x dan y?</p>
+    <input type="radio" name="jawab10" value="A"> A. x=3, y=1<br>
+    <input type="radio" name="jawab10" value="B"> B. x=5, y=3<br>
+    <input type="radio" name="jawab10" value="C"> C. x=4, y=2<br>
+    <input type="radio" name="jawab10" value="D"> D. x=6, y=3<br>
+    <button class="submit" onclick="cekJawaban(10,'C')">Submit</button>
+    <div class="feedback" id="feedback10"></div>
+  </div>
+
+  <button class="reset" onclick="resetKuiz()">Reset Kuiz</button>
+  <div id="skorAkhir" style="margin-top:15px;font-weight:700"></div>
+</div>
+
+<!-- Kalkulator Persen -->
 <div class="card" id="persen">
 <h2>Kalkulator Persen</h2>
 <input id="angka" type="number" placeholder="Angka">
 <input id="persenVal" type="number" placeholder="Persen">
-<button onclick="hasilPersen.innerText=angka.value*persenVal.value/100">Hitung</button>
+<div class="label-checkbox">Tampilkan Cara
+  <input type="checkbox" id="modePersen">
+</div>
+<button onclick="calcPersen()">Hitung</button>
 <div class="result" id="hasilPersen"></div>
+<div class="result" id="caraPersen" style="font-size:14px;color:white"></div>
+<button class="reset-btn" onclick="resetPersen()">Reset</button>
 </div>
 
+<!-- Kalkulator Volume -->
 <div class="card" id="volume">
-<h2>Volume Balok</h2>
-<input id="p" placeholder="Panjang">
-<input id="l" placeholder="Lebar">
-<input id="t" placeholder="Tinggi">
-<button onclick="hasilVolume.innerText=p.value*l.value*t.value">Hitung</button>
+<h2>Hitung Volume</h2>
+<select id="bangun">
+  <option value="kubus">Kubus</option>
+  <option value="balok">Balok</option>
+</select>
+<input type="number" id="sisi" placeholder="Sisi (kubus) / Panjang (balok)">
+<input type="number" id="lebar" placeholder="Lebar balok">
+<input type="number" id="tinggi" placeholder="Tinggi balok">
+<div class="label-checkbox">Tampilkan Cara
+  <input type="checkbox" id="modeVolume">
+</div>
+<button onclick="calcVolume()">Hitung</button>
 <div class="result" id="hasilVolume"></div>
+<div class="result" id="caraVolume" style="font-size:14px;color:white"></div>
+<button class="reset-btn" onclick="resetVolume()">Reset</button>
 </div>
 
+<!-- Kalkulator Satuan -->
 <div class="card" id="satuan">
 <h2>Konversi Meter</h2>
 <input id="m" placeholder="Meter">
-<button onclick="hasilSatuan.innerText=m.value*100+' cm | '+m.value*1000+' mm'">Konversi</button>
+<div class="label-checkbox">Tampilkan Cara
+  <input type="checkbox" id="modeSatuan">
+</div>
+<button onclick="calcSatuan()">Konversi</button>
 <div class="result" id="hasilSatuan"></div>
+<div class="result" id="caraSatuan" style="font-size:14px;color:white"></div>
+<button class="reset-btn" onclick="resetSatuan()">Reset</button>
 </div>
 
+<!-- Kalkulator Nilai -->
 <div class="card" id="nilai">
 <h2>Konversi Nilai</h2>
 <input id="n">
-<button onclick="hasilNilai.innerText=n.value>=85?'A':n.value>=75?'B':n.value>=65?'C':'D'">Konversi</button>
+<div class="label-checkbox">Tampilkan Cara
+  <input type="checkbox" id="modeNilai">
+</div>
+<button onclick="calcNilai()">Konversi</button>
 <div class="result" id="hasilNilai"></div>
+<div class="result" id="caraNilai" style="font-size:14px;color:white"></div>
+<button class="reset-btn" onclick="resetNilai()">Reset</button>
 </div>
 
+<!-- Kalkulator Rata-rata -->
 <div class="card" id="rata">
 <h2>Rata-rata</h2>
 <input id="arr" placeholder="80,70,90">
-<button onclick="rata()">Hitung</button>
+<div class="label-checkbox">Tampilkan Cara
+  <input type="checkbox" id="modeRata">
+</div>
+<button onclick="calcRata()">Hitung</button>
 <div class="result" id="hasilRata"></div>
+<div class="result" id="caraRata" style="font-size:14px;color:white"></div>
+<button class="reset-btn" onclick="resetRata()">Reset</button>
 </div>
 
+<!-- Kalkulator Trigonometri -->
 <div class="card" id="trigo">
 <h2>Trigonometri</h2>
 <input id="deg" placeholder="Sudut">
-<button onclick="trigo()">Hitung</button>
+<div class="label-checkbox">Tampilkan Cara
+  <input type="checkbox" id="modeTrigo">
+</div>
+<button onclick="calcTrigo()">Hitung</button>
 <div class="result" id="hasilTrigo"></div>
+<div class="result" id="caraTrigo" style="font-size:14px;color:white"></div>
+<button class="reset-btn" onclick="resetTrigo()">Reset</button>
 </div>
 
+<!-- Kalkulator Peluang -->
 <div class="card" id="peluang">
 <h2>Peluang</h2>
 <input id="a" placeholder="Jumlah kejadian">
 <input id="b" placeholder="Total kemungkinan">
-<button onclick="peluang()">Hitung</button>
+<div class="label-checkbox">Tampilkan Cara
+  <input type="checkbox" id="modePeluang">
+</div>
+<button onclick="calcPeluang()">Hitung</button>
 <div class="result" id="hasilPeluang"></div>
+<div class="result" id="caraPeluang" style="font-size:14px;color:white"></div>
+<button class="reset-btn" onclick="resetPeluang()">Reset</button>
 </div>
 
+<!-- Linear -->
+<div class="card" id="linear" style="display:none">
+
+<h2>Linear (Soal Cerita Timbangan)</h2>
+
+<h3>Penimbangan 1</h3>
+X <input id="a1" type="number"><br>
+Y <input id="b1" type="number"><br>
+Z <input id="c1" type="number"><br>
+Total <input id="d1" type="number"><br>
+
+<h3>Penimbangan 2</h3>
+X <input id="a2" type="number"><br>
+Y <input id="b2" type="number"><br>
+Z <input id="c2" type="number"><br>
+Total <input id="d2" type="number"><br>
+
+<h3>Penimbangan 3</h3>
+X <input id="a3" type="number"><br>
+Y <input id="b3" type="number"><br>
+Z <input id="c3" type="number"><br>
+Total <input id="d3" type="number"><br><br>
+
+<button onclick="hitungLinear()">Hitung</button>
+
+<br>
+
+<label style="display:flex;align-items:center;gap:6px;margin-top:8px;">
+  Tampilkan Cara
+  <input type="checkbox" id="modeLinear">
+</label>
+
+<div class="result" id="caraLinear"></div>
+<div id="hasilLinear" style="margin-top:15px;font-weight:700"></div>
+<button onclick="resetLinear()">Reset</button>
+
+</div>
+
+<div class="sponsor">BY : STAR PROSPEROUS</div>
 <footer>© 2026 Star Tools School</footer>
 
-</div>
-
 <script>
+const toggle = document.getElementById('modeToggle');
+
+toggle.addEventListener('click', () => {
+  if(document.body.classList.contains('dark')){
+    document.body.classList.remove('dark');
+    document.body.classList.add('light');
+  } else {
+    document.body.classList.remove('light');
+    document.body.classList.add('dark');
+  }
+});
+
+// Default mode
+document.body.classList.add('dark');
+
+let skor=0;
+
+function cekJawaban(n,jawabanBenar){
+  let radios = document.getElementsByName('jawab'+n);
+  let dipilih = Array.from(radios).find(r=>r.checked);
+  if(!dipilih){ alert("Pilih jawaban dulu!"); return; }
+  let feedback = document.getElementById('feedback'+n);
+  if(dipilih.value === jawabanBenar){
+    feedback.innerText = "Benar!";
+    feedback.style.color = "#00ff00";
+    skor++;
+  }else{
+    feedback.innerText = "Salah! Jawaban benar: "+jawabanBenar;
+    feedback.style.color = "#ff5555";
+  }
+  updateSkor();
+}
+
+function updateSkor(){
+  let totalSoal = document.querySelectorAll('.soal').length;
+  document.getElementById('skorAkhir').innerText = "Skor: "+skor+" / "+totalSoal;
+}
+
+function resetKuiz(){
+  skor=0;
+  document.querySelectorAll('input[type=radio]').forEach(r=>r.checked=false);
+  document.querySelectorAll('.feedback').forEach(f=>f.innerText='');
+  updateSkor();
+}
+
 function show(x){
 document.querySelectorAll('.card').forEach(c=>c.style.display='none');
 document.getElementById(x).style.display='block';
 }
 
-function rata(){
-let d=arr.value.split(',').map(Number);
-hasilRata.innerText=(d.reduce((x,y)=>x+y,0)/d.length).toFixed(2);
+// Persen
+function calcPersen(){
+let a=Number(document.getElementById('angka').value);
+let p=Number(document.getElementById('persenVal').value);
+let hasil = a*p/100;
+document.getElementById('hasilPersen').innerText = "Hasil = " + hasil;
+if(document.getElementById('modePersen').checked){
+document.getElementById('caraPersen').innerHTML = `Rumus: ${a} × ${p}% / 100<br>= ${hasil}`;
+}else{document.getElementById('caraPersen').innerHTML='';}
 }
+function resetPersen(){document.getElementById('angka').value='';document.getElementById('persenVal').value='';document.getElementById('hasilPersen').innerText='';document.getElementById('caraPersen').innerText='';}
 
-function trigo(){
-let d=parseInt(deg.value);
-let t={30:["1/2","√3/2","1/√3"],45:["√2/2","√2/2","1"],60:["√3/2","1/2","√3"]};
-if(t[d]) hasilTrigo.innerText=`sin=${t[d][0]} cos=${t[d][1]} tan=${t[d][2]}`;
-else{
+// Volume
+function calcVolume(){
+let b = document.getElementById('bangun').value;
+let s = Number(document.getElementById('sisi').value);
+let l = Number(document.getElementById('lebar').value);
+let t = Number(document.getElementById('tinggi').value);
+let hasil, cara='';
+if(b=="kubus"){
+hasil = s**3;
+cara = `Rumus: V = s × s × s<br>= ${s} × ${s} × ${s}<br>= ${hasil}`;
+}else{
+hasil = s*l*t;
+cara = `Rumus: V = p × l × t<br>= ${s} × ${l} × ${t}<br>= ${hasil}`;
+}
+document.getElementById('hasilVolume').innerText="Hasil = "+hasil;
+document.getElementById('caraVolume').innerHTML = document.getElementById('modeVolume').checked?cara:'';
+}
+function resetVolume(){document.getElementById('sisi').value='';document.getElementById('lebar').value='';document.getElementById('tinggi').value='';document.getElementById('hasilVolume').innerText='';document.getElementById('caraVolume').innerText='';}
+
+// Satuan
+function calcSatuan(){
+let m=Number(document.getElementById('m').value);
+let hasil = `${m*100} cm | ${m*1000} mm | ${m/1000} km`;
+document.getElementById('hasilSatuan').innerText="Hasil = "+hasil;
+let cara = `Rumus: cm = m × 100, mm = m × 1000, km = m ÷ 1000<br>= ${m} m → ${m*100} cm, ${m*1000} mm, ${m/1000} km`;
+document.getElementById('caraSatuan').innerHTML = document.getElementById('modeSatuan').checked?cara:'';
+}
+function resetSatuan(){document.getElementById('m').value='';document.getElementById('hasilSatuan').innerText='';document.getElementById('caraSatuan').innerText='';}
+
+// Nilai
+function calcNilai(){
+let n=Number(document.getElementById('n').value);
+let hasil = n>=85?'A':n>=75?'B':n>=65?'C':'D';
+document.getElementById('hasilNilai').innerText="Hasil = "+hasil;
+let cara = `Rumus: ≥85=A, ≥75=B, ≥65=C, <65=D<br>Input: ${n} → Nilai: ${hasil}`;
+document.getElementById('caraNilai').innerHTML = document.getElementById('modeNilai').checked?cara:'';
+}
+function resetNilai(){document.getElementById('n').value='';document.getElementById('hasilNilai').innerText='';document.getElementById('caraNilai').innerText='';}
+
+// Rata-rata
+function calcRata(){
+let arr=document.getElementById('arr').value.split(',').map(Number);
+let hasil=(arr.reduce((x,y)=>x+y,0)/arr.length).toFixed(2);
+document.getElementById('hasilRata').innerText="Hasil = "+hasil;
+let cara = `Rata-rata = jumlah nilai ÷ banyak data<br>= (${arr.join('+')}) ÷ ${arr.length}<br>= ${hasil}`;
+document.getElementById('caraRata').innerHTML = document.getElementById('modeRata').checked?cara:'';
+}
+function resetRata(){document.getElementById('arr').value='';document.getElementById('hasilRata').innerText='';document.getElementById('caraRata').innerText='';}
+
+// Trigonometri
+function calcTrigo(){
+let d=Number(document.getElementById('deg').value);
+let tabel={0:["0","1","0"],30:["1/2","1/2√3","1/3√3"],45:["1/2√2","1/2√2","1"],60:["1/2√3","1/2","√3"],90:["1","0","∞"]};
+let hasil, cara='';
+if(tabel[d]){
+hasil=`sin ${d}°=${tabel[d][0]}, cos=${tabel[d][1]}, tan=${tabel[d][2]}`;
+cara=`Rumus: sin=${tabel[d][0]}, cos=${tabel[d][1]}, tan=${tabel[d][2]}`;
+}else{
 let r=d*Math.PI/180;
-hasilTrigo.innerText=`sin=${Math.sin(r).toFixed(3)} cos=${Math.cos(r).toFixed(3)} tan=${Math.tan(r).toFixed(3)}`;
+hasil=`sin=${Math.sin(r).toFixed(4)}, cos=${Math.cos(r).toFixed(4)}, tan=${Math.tan(r).toFixed(4)}`;
+cara=`Rumus: sin(${d}°)=sin(${r.toFixed(4)})=${Math.sin(r).toFixed(4)}<br>
+cos(${d}°)=cos(${r.toFixed(4)})=${Math.cos(r).toFixed(4)}<br>
+tan(${d}°)=tan(${r.toFixed(4)})=${Math.tan(r).toFixed(4)}`;
 }
+document.getElementById('hasilTrigo').innerText="Hasil = "+hasil;
+document.getElementById('caraTrigo').innerHTML=document.getElementById('modeTrigo').checked?cara:'';
+}
+function resetTrigo(){document.getElementById('deg').value='';document.getElementById('hasilTrigo').innerText='';document.getElementById('caraTrigo').innerText='';}
+
+// Peluang
+function calcPeluang(){
+let a=Number(document.getElementById('a').value);
+let b=Number(document.getElementById('b').value);
+let hasil=(a/b*100).toFixed(2)+'%';
+document.getElementById('hasilPeluang').innerText="Hasil = "+hasil;
+let cara=`Rumus: P = kejadian ÷ total kemungkinan<br>= ${a} ÷ ${b} = ${hasil}`;
+document.getElementById('caraPeluang').innerHTML=document.getElementById('modePeluang').checked?cara:'';
+}
+function resetPeluang(){document.getElementById('a').value='';document.getElementById('b').value='';document.getElementById('hasilPeluang').innerText='';document.getElementById('caraPeluang').innerText='';}
+
+//Linear
+function hitungLinear(){
+let a1 = Number(document.getElementById("a1").value);
+let b1 = Number(document.getElementById("b1").value);
+let c1 = Number(document.getElementById("c1").value);
+let d1 = Number(document.getElementById("d1").value);
+
+let a2 = Number(document.getElementById("a2").value);
+let b2 = Number(document.getElementById("b2").value);
+let c2 = Number(document.getElementById("c2").value);
+let d2 = Number(document.getElementById("d2").value);
+
+let a3 = Number(document.getElementById("a3").value);
+let b3 = Number(document.getElementById("b3").value);
+let c3 = Number(document.getElementById("c3").value);
+let d3 = Number(document.getElementById("d3").value);
+
+// determinan
+let D = a1*(b2*c3-b3*c2)-b1*(a2*c3-a3*c2)+c1*(a2*b3-a3*b2);
+let Dx = d1*(b2*c3-b3*c2)-b1*(d2*c3-d3*c2)+c1*(d2*b3-d3*b2);
+let Dy = a1*(d2*c3-d3*c2)-d1*(a2*c3-a3*c2)+c1*(a2*d3-a3*d2);
+let Dz = a1*(b2*d3-b3*d2)-b1*(a2*d3-a3*d2)+d1*(a2*b3-a3*b2);
+
+if(D==0){
+alert("Tidak punya solusi unik");
+return;
 }
 
-function peluang(){
-let p=(a.value/b.value*100).toFixed(2);
-hasilPeluang.innerText=`P = ${a.value}/${b.value} = ${p}%`;
+let x = (Dx/D)/1000;
+let y = (Dy/D)/1000;
+let z = (Dz/D)/1000;
+
+document.getElementById("hasilLinear").innerText =
+"X = "+x.toFixed(2)+" | Y = "+y.toFixed(2)+" | Z = "+z.toFixed(2);
+
+if(document.getElementById("modeLinear").checked){
+
+document.getElementById("caraLinear").innerHTML =
+"Langkah 1: Eliminasi Z<br>"+
+"Langkah 2: Eliminasi Y<br>"+
+"Langkah 3: Substitusi<br><br>"+
+"X = "+x.toFixed(2)+"<br>"+
+"Y = "+y.toFixed(2)+"<br>"+
+"Z = "+z.toFixed(2);
+
 }
+
+}
+
+function resetLinear(){
+
+["a1","b1","c1","d1","a2","b2","c2","d2","a3","b3","c3","d3"]
+.forEach(id=>document.getElementById(id).value="");
+
+document.getElementById("hasilLinear").innerText="";
+document.getElementById("caraLinear").innerHTML="";
+document.getElementById("modeLinear").checked=false;
+
+}
+
 </script>
-
 </body>
 </html>
