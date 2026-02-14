@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Star Tools School v1.1</title>
+<title>Star Tools School v1.2</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;}
@@ -12,14 +12,12 @@ header{text-align:center;padding:25px;font-size:30px;font-weight:700;}
 .container{max-width:1000px;margin:auto;padding:20px;}
 .hero{text-align:center;background:rgba(255,255,255,.12);padding:30px;border-radius:20px;margin-bottom:25px;box-shadow:0 15px 35px rgba(0,0,0,.35);}
 .hero h1{color:#ffd369;}
-.badge{display:inline-block;background:#ffb703;color:#000;padding:4px 12px;border-radius:20px;font-size:12px;margin-top:10px;}
 .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:25px 0;}
 .menu button{padding:14px;border:none;border-radius:14px;font-weight:600;cursor:pointer;background:white;color:#1e3c72;}
 .card{display:none;background:rgba(255,255,255,.15);padding:25px;border-radius:20px;margin-bottom:20px;}
 input,select{width:100%;padding:12px;margin:8px 0;border-radius:12px;border:none;}
-.card button{width:100%;padding:12px;border:none;border-radius:12px;font-weight:700;background:#ffd369;cursor:pointer;}
 .result{text-align:center;margin-top:10px;font-size:18px;color:#ffeb99;}
-footer{text-align:center;opacity:.6;margin:40px 0;}
+}er{text-align:center;opacity:.6;margin:40px 0;}
 .label-checkbox{display:flex;align-items:center;margin-top:10px;cursor:pointer;font-size:15px;}
 .label-checkbox input{margin-left:6px;}
 .reset-btn{background:#ff4d4d;color:#fff;margin-top:8px;}
@@ -53,6 +51,153 @@ body.dark .menu button {
   background: #fff;
   color: #1e3c72;
 }
+.linear-btn{
+  margin-bottom:15px;
+}
+.example-box{
+  background: rgba(255,255,255,0.18);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbbf24; /* oren soft */
+  color: #111;
+  padding: 6px 14px;
+  border-radius: 999px; /* full bulat */
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.25);
+}
+.mode-btn {
+  width: 100%;
+  max-width: 350px;
+  padding: 14px;
+  margin: 10px auto;
+  display: block;
+
+  background: #ffffff;
+  color: #1f3c88;
+  border: none;
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.mode-btn:active {
+  transform: scale(0.97);
+}
+#pilihMode {
+  padding: 10px 20px;
+}
+
+#pilihMode button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+
+  background: #f2f2f2;
+  color: #1f3c88;
+
+  border: none;
+  border-radius: 40px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+  transition: all 0.2s ease;
+}
+
+#pilihMode button:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+#pilihMode button:active {
+  transform: scale(0.98);
+}
+.menu-btn {
+  width: 100%;
+  max-width: 350px;
+  padding: 14px;
+
+  margin: 12px auto;
+  display: block;
+
+  background: #ffffff;
+  color: #1f3c88;
+
+  border: none;
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+}
+
+.menu-btn:active {
+  transform: scale(0.97);
+}
+button {
+  background: #f3c969;
+  color: #1f2d3d;
+  border: none;
+  padding: 14px;
+  margin: 1px 0;
+  width: 100%;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  background: #e6b85c;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+.card button {
+  margin-top: 8px;
+}
+.footer-wrapper {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 25px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+.card {
+  display: none;
+}
+
+.card.active-card {
+  display: block !important;
+}
 </style>
 </head>
 <body>
@@ -65,27 +210,147 @@ body.dark .menu button {
 Web ini dibuat untuk mempermudah permasalahan matematika.<br><br>
 Web ini dibuat oleh<br><b>Bintang Ramadhan</b><br><br>
 Jika terdapat kesalahan mohon berikan laporan.<br>
-<a href="mailto: zzzbinzz50@gmail.com" style="color:#ffd369">Laporkan Bug (Email)</a><br>
-<div class="badge">v1.1</div>
+<a href="mailto:starprosperous21@gmail.com" style="color:#ffd369">Laporkan Bug (Email)</a><br>
+<div class="badge">v1.2</div>
 </div>
 
-<div style="text-align:center; margin-bottom:15px;">
-  <button id="modeToggle" style="padding:8px 15px; border:none; border-radius:8px; cursor:pointer;">
+<div style="text-align:center; margin-bottom:15px; width:180px; margin-left:auto; margin-right:auto;">
+  <button id="modeToggle" style="padding:8px 10px; border:none; border-radius:8px; cursor:pointer;">
      Gelap/Terang
   </button>
 </div>
 
-<div class="menu"> 
-<button onclick="show('profil')">Profil</button>
-<button onclick="show('kuiz')">Kuiz Sulit</button>
-<button onclick="show('persen')">Persen</button>
-<button onclick="show('volume')">Volume</button>
-<button onclick="show('satuan')">Satuan</button>
-<button onclick="show('nilai')">Nilai</button>
-<button onclick="show('rata')">Rata-rata</button>
-<button onclick="show('trigo')">Trigonometri</button>
-<button onclick="show('peluang')">Peluang</button>
-<button onclick="show('linear')">Linear</button>
+<div id="pilihMode">
+  <button id="btnGuru">Aku Guru</button>
+  <button id="btnMurid">Aku Murid</button>
+</div>
+
+<!-- GURU -->
+<div id="guru" style="display:none">
+  <h2>Halaman Guru</h2>
+  <button onclick="showCard('rapotGuru')">Rapot Guru</button>
+  <button onclick="showCard('rangkingGuruDiv')">Rangking</button>
+  <button onclick="showCard('setupBox')">Absensi</button>
+  <button onclick="backToMode()">Kembali</button>
+</div>
+
+  <!-- RAPOT -->
+  <div class="card" id="rapotGuru" style="display:none;">
+    <h2>Input Nilai Rapot</h2>
+
+    <input type="text" id="namaSiswa" placeholder="Nama Siswa">
+
+    <input type="number" id="mtk" placeholder="Nilai Matematika">
+    <input type="number" id="indo" placeholder="Nilai Bahasa Indonesia">
+    <input type="number" id="inggris" placeholder="Nilai Bahasa Inggris">
+    <input type="number" id="ipa" placeholder="Nilai IPA">
+
+    <button onclick="hitungRapot()">Hitung Rapot</button>
+    <button onclick="resetGuru()">Reset</button>
+
+    <div class="result" id="hasilRapot"></div>
+  </div>
+
+<!-- RANKING -->
+<div class="card" id="rangkingGuruDiv" style="display:none;">
+  <h2>Ranking Kelas</h2>
+
+  <input type="text" id="namaSiswaRank" placeholder="Nama Siswa">
+  <input type="number" id="nilaiSiswaRank" placeholder="Nilai Rata-rata">
+
+  <button class="menu-btn" onclick="tambahRanking()">Tambah ke Ranking</button>
+  <button onclick="resetRanking()">Reset</button>
+
+  <div class="result" id="daftarRanking"></div>
+</div>
+
+<!-- ABSEN -->
+<div class="card" id="setupBox" style="display:none;">
+  <h2>Buat Password Kelas</h2>
+  <input type="text" id="namaKelas" placeholder="Nama Kelas">
+  <input type="password" id="pwKelas" placeholder="Buat Password">
+  <button onclick="simpanPassword()">Simpan</button>
+</div>
+
+<div id="loginBox" style="display:none;">
+  <h2>Login Kelas</h2>
+  <input type="password" id="loginPw" placeholder="Masukkan Password">
+  <button onclick="loginKelas()">Masuk</button>
+</div>
+
+<div id="absenBox" style="display:none;">
+  <h2>Absensi</h2>
+
+  <!-- Tambah Murid Baru -->
+  <h3>Tambah Murid Baru</h3>
+  <input type="text" id="namaMuridBaru" placeholder="Nama Murid">
+  <button onclick="tambahMurid()">Tambah Murid</button>
+
+  <!-- Pilih Bulan -->
+  <h3>Pilih Bulan</h3>
+  <select id="bulanSelect" onchange="loadTabel()">
+    <option value="Januari">Januari</option>
+    <option value="Februari">Februari</option>
+    <option value="Maret">Maret</option>
+    <option value="April">April</option>
+    <option value="Mei">Mei</option>
+    <option value="Juni">Juni</option>
+    <option value="Juli">Juli</option>
+    <option value="Agustus">Agustus</option>
+    <option value="September">September</option>
+    <option value="Oktober">Oktober</option>
+    <option value="November">November</option>
+    <option value="Desember">Desember</option>
+  </select>
+
+  <!-- Tabel Absensi -->
+  <h3>Tabel Absensi</h3>
+  <div id="tabelAbsen"></div>
+
+  <h3>Tidak Masuk Hari Ini</h3>
+<div id="tidakMasuk">
+  Semua hadir hari ini!
+</div>
+
+   <h3>Rekap Bulanan</h3>
+<div id="rekapBulanan">Pilih bulan untuk melihat rekap</div>
+   
+  <!-- Form Isi Absen Harian -->
+  <h3>Isi Absen Harian</h3>
+  <select id="namaSiswaAbsenForm"></select>
+  <select id="statusAbsenForm">
+    <option value="Hadir">Hadir</option>
+    <option value="Izin">Izin</option>
+    <option value="Sakit">Sakit</option>
+    <option value="Alpa">Alpa</option>
+  </select>
+  <button onclick="tambahAbsen()">Simpan Absen</button>
+  
+   <button onclick="hadirSemua()" class="btn-hadir-semua">
+  Hadir Semua
+</button>
+
+  <button onclick="resetBulanBaru()">Reset Bulan Ini</button>
+  <button onclick="logoutKelas()">Logout</button>
+</div>
+
+
+
+<!-- MURID -->
+<div id="murid" style="display:none">
+  <h2>Halaman Murid</h2>
+  
+  <button onclick="showCard('profil')">Profil</button>
+  <button onclick="showCard('persen')">Persen</button>
+  <button onclick="showCard('volume')">Volume</button>
+  <button onclick="showCard('satuan')">Satuan</button>
+  <button onclick="showCard('nilai')">Nilai</button>
+  <button onclick="showCard('rata')">Rata</button>
+  <button onclick="showCard('trigo')">Trigo</button>
+  <button onclick="showCard('peluang')">Peluang</button>
+  <button onclick="showCard('linearCard')">Linear</button>
+  <button onclick="showCard('pertidaksamaanCard')">Pertidaksamaan</button>
+  <button onclick="backToMode()">Kembali</button>
 </div>
 
 <div class="card" id="profil">
@@ -99,7 +364,7 @@ Jika terdapat kesalahan mohon berikan laporan.<br>
       <li>Memberikan akses informasi belajar secara cepat untuk semua siswa.</li>
     </ul>
     <p>Masukan & saran bisa dikirim via: 
-  <a href="mailto:zzzbinzz50@gmail.com" style="color:#ffd369;">Email</a>
+  <a href="mailto:starprosperous21@gmail.com" style="color:#ffd369;">Email</a>
 </p>
   </div>
 </div>
@@ -123,140 +388,42 @@ Jika terdapat kesalahan mohon berikan laporan.<br>
 }
 </style>
 
-<div class="card" id="kuiz">
-  <h2>Kuiz Matematika Sulit</h2>
-
-  <!-- Soal 1 -->
-  <div class="soal" id="soal1">
-    <p>1. 3x - 5 = 2x + 7, nilai x?</p>
-    <input type="radio" name="jawab1" value="A"> A. 10<br>
-    <input type="radio" name="jawab1" value="B"> B. 12<br>
-    <input type="radio" name="jawab1" value="C"> C. 8<br>
-    <input type="radio" name="jawab1" value="D"> D. 15<br>
-    <button class="submit" onclick="cekJawaban(1,'B')">Submit</button>
-    <div class="feedback" id="feedback1"></div>
-  </div>
-
-  <!-- Soal 2 -->
-  <div class="soal" id="soal2">
-    <p>2. Kantong 5 bola merah, 3 biru. Ambil 2 sekaligus. Peluang berbeda warna?</p>
-    <input type="radio" name="jawab2" value="A"> A. 1/2<br>
-    <input type="radio" name="jawab2" value="B"> B. 1/3<br>
-    <input type="radio" name="jawab2" value="C"> C. 5/12<br>
-    <input type="radio" name="jawab2" value="D"> D. 7/12<br>
-    <button class="submit" onclick="cekJawaban(2,'C')">Submit</button>
-    <div class="feedback" id="feedback2"></div>
-  </div>
-
-  <!-- Soal 3 -->
-  <div class="soal" id="soal3">
-    <p>3. Jika sin θ = 3/5, maka cos θ dan tan θ?</p>
-    <input type="radio" name="jawab3" value="A"> A. cos θ = 4/5, tan θ = 3/4<br>
-    <input type="radio" name="jawab3" value="B"> B. cos θ = 3/5, tan θ = 4/3<br>
-    <input type="radio" name="jawab3" value="C"> C. cos θ = 1/2, tan θ = 2/1<br>
-    <input type="radio" name="jawab3" value="D"> D. cos θ = 5/3, tan θ = 3/5<br>
-    <button class="submit" onclick="cekJawaban(3,'A')">Submit</button>
-    <div class="feedback" id="feedback3"></div>
-  </div>
-
-  <!-- Soal 4 -->
-  <div class="soal" id="soal4">
-    <p>4. Nilai 5 siswa: 80,85,75,90,95. Rata-rata berbobot nilai tertinggi x1,5?</p>
-    <input type="radio" name="jawab4" value="A"> A. 85<br>
-    <input type="radio" name="jawab4" value="B"> B. 86<br>
-    <input type="radio" name="jawab4" value="C"> C. 87<br>
-    <input type="radio" name="jawab4" value="D"> D. 88<br>
-    <button class="submit" onclick="cekJawaban(4,'D')">Submit</button>
-    <div class="feedback" id="feedback4"></div>
-  </div>
-
-  <!-- Soal 5 -->
-  <div class="soal" id="soal5">
-    <p>5. Balok: panjang 10, lebar 5, tinggi dikurangi 20%, volume baru 360. Tinggi awal?</p>
-    <input type="radio" name="jawab5" value="A"> A. 8<br>
-    <input type="radio" name="jawab5" value="B"> B. 9<br>
-    <input type="radio" name="jawab5" value="C"> C. 10<br>
-    <input type="radio" name="jawab5" value="D"> D. 12<br>
-    <button class="submit" onclick="cekJawaban(5,'B')">Submit</button>
-    <div class="feedback" id="feedback5"></div>
-  </div>
-
-  <!-- Soal 6 -->
-  <div class="soal" id="soal6">
-    <p>6. x² - 5x + 6 = 0. Nilai x?</p>
-    <input type="radio" name="jawab6" value="A"> A. 1 atau 6<br>
-    <input type="radio" name="jawab6" value="B"> B. 3 atau 1<br>
-    <input type="radio" name="jawab6" value="C"> C. 2 atau 3<br>
-    <input type="radio" name="jawab6" value="D"> D. 4 atau 2<br>
-    <button class="submit" onclick="cekJawaban(6,'C')">Submit</button>
-    <div class="feedback" id="feedback6"></div>
-  </div>
-
-  <!-- Soal 7 -->
-  <div class="soal" id="soal7">
-    <p>7. 2^x = 16, x=?</p>
-    <input type="radio" name="jawab7" value="A"> A. 4<br>
-    <input type="radio" name="jawab7" value="B"> B. 3<br>
-    <input type="radio" name="jawab7" value="C"> C. 5<br>
-    <input type="radio" name="jawab7" value="D"> D. 2<br>
-    <button class="submit" onclick="cekJawaban(7,'A')">Submit</button>
-    <div class="feedback" id="feedback7"></div>
-  </div>
-
-  <!-- Soal 8 -->
-  <div class="soal" id="soal8">
-    <p>8. Hitung sin 45° + cos 45°?</p>
-    <input type="radio" name="jawab8" value="A"> A. 1<br>
-    <input type="radio" name="jawab8" value="B"> B. 1,2<br>
-    <input type="radio" name="jawab8" value="C"> C. 1,3<br>
-    <input type="radio" name="jawab8" value="D"> D. √2 ≈ 1,414<br>
-    <button class="submit" onclick="cekJawaban(8,'D')">Submit</button>
-    <div class="feedback" id="feedback8"></div>
-  </div>
-
-  <!-- Soal 9 -->
-  <div class="soal" id="soal9">
-    <p>9. Lempar 2 dadu. Peluang jumlah mata = 7?</p>
-    <input type="radio" name="jawab9" value="A"> A. 1/8<br>
-    <input type="radio" name="jawab9" value="B"> B. 1/6<br>
-    <input type="radio" name="jawab9" value="C"> C. 1/4<br>
-    <input type="radio" name="jawab9" value="D"> D. 1/12<br>
-    <button class="submit" onclick="cekJawaban(9,'B')">Submit</button>
-    <div class="feedback" id="feedback9"></div>
-  </div>
-
-  <!-- Soal 10 -->
-  <div class="soal" id="soal10">
-    <p>10. 2x + 3y = 12, x - y = 2. Nilai x dan y?</p>
-    <input type="radio" name="jawab10" value="A"> A. x=3, y=1<br>
-    <input type="radio" name="jawab10" value="B"> B. x=5, y=3<br>
-    <input type="radio" name="jawab10" value="C"> C. x=4, y=2<br>
-    <input type="radio" name="jawab10" value="D"> D. x=6, y=3<br>
-    <button class="submit" onclick="cekJawaban(10,'C')">Submit</button>
-    <div class="feedback" id="feedback10"></div>
-  </div>
-
-  <button class="reset" onclick="resetKuiz()">Reset Kuiz</button>
-  <div id="skorAkhir" style="margin-top:15px;font-weight:700"></div>
-</div>
-
 <!-- Kalkulator Persen -->
 <div class="card" id="persen">
-<h2>Kalkulator Persen</h2>
-<input id="angka" type="number" placeholder="Angka">
-<input id="persenVal" type="number" placeholder="Persen">
-<div class="label-checkbox">Tampilkan Cara
-  <input type="checkbox" id="modePersen">
-</div>
-<button onclick="calcPersen()">Hitung</button>
-<div class="result" id="hasilPersen"></div>
-<div class="result" id="caraPersen" style="font-size:14px;color:white"></div>
-<button class="reset-btn" onclick="resetPersen()">Reset</button>
+  <h2>Kalkulator Persen</h2>
+  <div class="example-box">
+      <b>Contoh Soal Persen:</b><br>
+      20% dari 150 adalah?
+  </div>
+
+  <input id="angka" type="number" placeholder="Angka">
+  <input id="persenVal" type="number" placeholder="Persen">
+
+  <div class="label-checkbox">
+    Tampilkan Cara
+    <input type="checkbox" id="modePersen">
+  </div>
+
+  <button onclick="calcPersen()">Hitung</button>
+  <div class="result" id="hasilPersen"></div>
+
+  <button onclick="copyPersen()">Copy Hasil</button>
+  <div class="result" id="caraPersen" style="font-size:14px;color:white"></div>
+
+  <button onclick="resetPersen()">Reset</button>
 </div>
 
 <!-- Kalkulator Volume -->
 <div class="card" id="volume">
 <h2>Hitung Volume</h2>
+<div class="example-box">
+    <b>Contoh Soal Volume Kubus:</b><br>
+    Sebuah kubus memiliki panjang sisi 6 cm. Berapa volume kubus tersebut?
+  </div>
+<div class="example-box">
+    <b>Contoh Soal Volume Balok:</b><br>
+    Sebuah balok memiliki panjang 8 cm, lebar 5 cm, dan tinggi 4 cm. Berapa volumenya?
+  </div>
 <select id="bangun">
   <option value="kubus">Kubus</option>
   <option value="balok">Balok</option>
@@ -269,65 +436,90 @@ Jika terdapat kesalahan mohon berikan laporan.<br>
 </div>
 <button onclick="calcVolume()">Hitung</button>
 <div class="result" id="hasilVolume"></div>
+<button onclick="copyVolume()">Copy Hasil</button>
 <div class="result" id="caraVolume" style="font-size:14px;color:white"></div>
-<button class="reset-btn" onclick="resetVolume()">Reset</button>
+<button onclick="resetVolume()">Reset</button>
 </div>
 
 <!-- Kalkulator Satuan -->
 <div class="card" id="satuan">
 <h2>Konversi Meter</h2>
+<div class="example-box">
+    <b>Contoh Soal Konversi Satuan:</b><br>
+    Ubah 2,5 kilometer menjadi meter.
+  </div>
 <input id="m" placeholder="Meter">
 <div class="label-checkbox">Tampilkan Cara
   <input type="checkbox" id="modeSatuan">
 </div>
 <button onclick="calcSatuan()">Konversi</button>
 <div class="result" id="hasilSatuan"></div>
+<button onclick="copySatuan()">Copy Hasil</button>
 <div class="result" id="caraSatuan" style="font-size:14px;color:white"></div>
-<button class="reset-btn" onclick="resetSatuan()">Reset</button>
+<button onclick="resetSatuan()">Reset</button>
 </div>
 
 <!-- Kalkulator Nilai -->
 <div class="card" id="nilai">
 <h2>Konversi Nilai</h2>
+<div class="example-box">
+    <b>Contoh Soal Konversi Nilai:</b><br>
+    Seorang siswa mendapat nilai 82. Tentukan predikat nilai berdasarkan skala A–E.
+  </div>
 <input id="n">
 <div class="label-checkbox">Tampilkan Cara
   <input type="checkbox" id="modeNilai">
 </div>
 <button onclick="calcNilai()">Konversi</button>
 <div class="result" id="hasilNilai"></div>
+<button onclick="copyNilai()">Copy Hasil</button>
 <div class="result" id="caraNilai" style="font-size:14px;color:white"></div>
-<button class="reset-btn" onclick="resetNilai()">Reset</button>
+<button onclick="resetNilai()">Reset</button>
 </div>
 
 <!-- Kalkulator Rata-rata -->
 <div class="card" id="rata">
 <h2>Rata-rata</h2>
+<div class="example-box">
+    <b>Contoh Soal Rata Rata:</b><br>
+    Nilai ulangan Natan adalah 75, 80, dan 85. Berapa nilai rata-ratanya?
+  </div>
 <input id="arr" placeholder="80,70,90">
 <div class="label-checkbox">Tampilkan Cara
   <input type="checkbox" id="modeRata">
 </div>
 <button onclick="calcRata()">Hitung</button>
 <div class="result" id="hasilRata"></div>
+<button onclick="copyRata()">Copy Hasil</button>
 <div class="result" id="caraRata" style="font-size:14px;color:white"></div>
-<button class="reset-btn" onclick="resetRata()">Reset</button>
+<button onclick="resetRata()">Reset</button>
 </div>
 
 <!-- Kalkulator Trigonometri -->
 <div class="card" id="trigo">
 <h2>Trigonometri</h2>
+<div class="example-box">
+    <b>Contoh Soal Trigonometri:</b><br>
+    Diketahui segitiga siku-siku dengan sudut θ, sisi depan = 6 cm dan sisi miring = 10 cm. Tentukan nilai sin θ.
+  </div>
 <input id="deg" placeholder="Sudut">
 <div class="label-checkbox">Tampilkan Cara
   <input type="checkbox" id="modeTrigo">
 </div>
 <button onclick="calcTrigo()">Hitung</button>
 <div class="result" id="hasilTrigo"></div>
+<button onclick="copyTrigo()">Copy Hasil</button>
 <div class="result" id="caraTrigo" style="font-size:14px;color:white"></div>
-<button class="reset-btn" onclick="resetTrigo()">Reset</button>
+<button onclick="resetTrigo()">Reset</button>
 </div>
 
 <!-- Kalkulator Peluang -->
 <div class="card" id="peluang">
 <h2>Peluang</h2>
+<div class="example-box">
+    <b>Contoh Soal Peluang:</b><br>
+    Sebuah dadu dilempar satu kali. Berapa peluang muncul angka 6?
+  </div>
 <input id="a" placeholder="Jumlah kejadian">
 <input id="b" placeholder="Total kemungkinan">
 <div class="label-checkbox">Tampilkan Cara
@@ -335,50 +527,68 @@ Jika terdapat kesalahan mohon berikan laporan.<br>
 </div>
 <button onclick="calcPeluang()">Hitung</button>
 <div class="result" id="hasilPeluang"></div>
+<button onclick="copyPeluang()">Copy Hasil</button>
 <div class="result" id="caraPeluang" style="font-size:14px;color:white"></div>
-<button class="reset-btn" onclick="resetPeluang()">Reset</button>
+<button onclick="resetPeluang()">Reset</button>
 </div>
 
 <!-- Linear -->
-<div class="card" id="linear" style="display:none">
+<div id="linearCard" class="card" style="display:none">
+<h2>Persamaan Linear</h2>
+<div class="example-box">
+    <b>Contoh Soal Persamaan Linear 2:</b><br>
+    Tentukan nilai x dan y dari sistem persamaan berikut:<br>
+2x + y = 7<br>
+x + y = 5<br>
+  </div>
+<div class="example-box">
+    <b>Contoh Soal Persamaan Linear 3:</b><br>
+    Tentukan nilai x, y, dan z dari sistem persamaan berikut:<br>
+x + y + z = 6<br>
+2x + y − z = 3<br>
+x − y + z = 2<br>
+  </div>
+<div id="menuVar">
+<button class="linear-btn" onclick="showLinear2()">2 Variabel</button>
+<button class="linear-btn" onclick="showLinear3()">3 Variabel</button>
+</div>
+<div id="formLinear"></div>
+<div class="result" id="hasil"></div>
+<button onclick="copyformLinear()">Copy Hasil</button>
+<div class="result" id="cara"></div>
+<button onclick="resetformLinear()">Reset</button>
+</div>
 
-<h2>Linear (Soal Cerita Timbangan)</h2>
-
-<h3>Penimbangan 1</h3>
-X <input id="a1" type="number"><br>
-Y <input id="b1" type="number"><br>
-Z <input id="c1" type="number"><br>
-Total <input id="d1" type="number"><br>
-
-<h3>Penimbangan 2</h3>
-X <input id="a2" type="number"><br>
-Y <input id="b2" type="number"><br>
-Z <input id="c2" type="number"><br>
-Total <input id="d2" type="number"><br>
-
-<h3>Penimbangan 3</h3>
-X <input id="a3" type="number"><br>
-Y <input id="b3" type="number"><br>
-Z <input id="c3" type="number"><br>
-Total <input id="d3" type="number"><br><br>
-
-<button onclick="hitungLinear()">Hitung</button>
-
-<br>
-
-<label style="display:flex;align-items:center;gap:6px;margin-top:8px;">
-  Tampilkan Cara
-  <input type="checkbox" id="modeLinear">
-</label>
-
-<div class="result" id="caraLinear"></div>
-<div id="hasilLinear" style="margin-top:15px;font-weight:700"></div>
-<button onclick="resetLinear()">Reset</button>
+<!-- Pertidaksamaan Linear -->
+<div id="pertidaksamaanCard" class="card" style="display:none">
+  <h2>Pertidaksamaan Linear</h2>
+<div class="example-box">
+    <b>Contoh Soal Pertidaksamaan Linear 2:</b><br>
+    Tentukan daerah penyelesaian dari pertidaksamaan:<br>
+2x + y ≤ 6<br>
+  </div>
+<div id="menuPertidaksamaan">
+    <button onclick="showPertidaksamaan2()">2 Variabel</button>
+ <div id="formPertidaksamaan"></div>
+ <div id="phasil" class="result"></div>
+<button onclick="copyPertidaksamaan()">Copy Hasil</button>
+ <div id="pcara" class="result"></div>
+<button onclick="resetPertidaksamaan()">Reset</button>
+</div>
 
 </div>
 
-<div class="sponsor">BY : STAR PROSPEROUS</div>
-<footer>© 2026 Star Tools School</footer>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<!-- FOOTER -->
+<div class="footer-wrapper">
+  <div class="sponsor">BY : STAR PROSPEROUS</div>
+  <div style="text-align:center; margin-top:15px;">
+    <p style="margin:0;">© 2026 Star Tools School</p>
+  </div>
+</div>
 
 <script>
 const toggle = document.getElementById('modeToggle');
@@ -393,43 +603,333 @@ toggle.addEventListener('click', () => {
   }
 });
 
-// Default mode
-document.body.classList.add('dark');
+//Rapot
+function hitungRapot() {
+  const nama = document.getElementById("namaSiswa").value;
+  const mtk = parseFloat(document.getElementById("mtk").value) || 0;
+  const indo = parseFloat(document.getElementById("indo").value) || 0;
+  const inggris = parseFloat(document.getElementById("inggris").value) || 0;
+  const ipa = parseFloat(document.getElementById("ipa").value) || 0;
 
-let skor=0;
+  const rata = (mtk + indo + inggris + ipa) / 4;
 
-function cekJawaban(n,jawabanBenar){
-  let radios = document.getElementsByName('jawab'+n);
-  let dipilih = Array.from(radios).find(r=>r.checked);
-  if(!dipilih){ alert("Pilih jawaban dulu!"); return; }
-  let feedback = document.getElementById('feedback'+n);
-  if(dipilih.value === jawabanBenar){
-    feedback.innerText = "Benar!";
-    feedback.style.color = "#00ff00";
-    skor++;
-  }else{
-    feedback.innerText = "Salah! Jawaban benar: "+jawabanBenar;
-    feedback.style.color = "#ff5555";
+  document.getElementById("hasilRapot").innerHTML =
+    "Nama: " + nama + "<br>Rata-rata: " + rata.toFixed(2);
+}
+
+function resetGuru() {
+  document.getElementById("namaSiswa").value = "";
+  document.getElementById("mtk").value = "";
+  document.getElementById("indo").value = "";
+  document.getElementById("inggris").value = "";
+  document.getElementById("ipa").value = "";
+  document.getElementById("hasilRapot").innerHTML = "";
+}
+
+
+
+//Rangking
+function tambahRanking() {
+  let nama = document.getElementById("namaSiswaRank").value.trim();
+  let nilai = parseFloat(document.getElementById("nilaiSiswaRank").value) || 0;
+
+  if(nama === "") {
+    alert("Isi nama dulu bre!");
+    return;
   }
-  updateSkor();
+
+  dataSiswa.push({nama: nama, nilai: nilai});
+  dataSiswa.sort((a,b) => b.nilai - a.nilai);
+  tampilRanking();
 }
 
-function updateSkor(){
-  let totalSoal = document.querySelectorAll('.soal').length;
-  document.getElementById('skorAkhir').innerText = "Skor: "+skor+" / "+totalSoal;
+function tampilRanking() {
+  let html = "";
+  for(let i=0; i<dataSiswa.length; i++){
+    html += `${i+1}. ${dataSiswa[i].nama} - ${dataSiswa[i].nilai}<br>`;
+  }
+  document.getElementById("daftarRanking").innerHTML = html;
 }
 
-function resetKuiz(){
-  skor=0;
-  document.querySelectorAll('input[type=radio]').forEach(r=>r.checked=false);
-  document.querySelectorAll('.feedback').forEach(f=>f.innerText='');
-  updateSkor();
+function resetRanking() {
+  dataSiswa = [];
+  document.getElementById("daftarRanking").innerHTML = "";
+  document.getElementById("namaSiswaRank").value = "";
+  document.getElementById("nilaiSiswaRank").value = "";
 }
 
-function show(x){
-document.querySelectorAll('.card').forEach(c=>c.style.display='none');
-document.getElementById(x).style.display='block';
+function show(divId) {
+  // hide semua card
+  document.querySelectorAll('.card').forEach(c => c.style.display = 'none');
+
+  // tampilkan card yang diminta
+  document.getElementById(divId).style.display = 'block';
 }
+
+
+//ABSENSI
+const firebaseConfig = {
+  apiKey: "AIzaSyA7foZX8BpYVX6JC1rOpTRiKOuCpmL8BPc",
+  authDomain: "absensi-bintang-586a1.firebaseapp.com",
+  databaseURL: "https://absensi-bintang-586a1-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "absensi-bintang-586a1",
+  storageBucket: "absensi-bintang-586a1.appspot.com",
+  messagingSenderId: "805938764052",
+  appId: "1:805938764052:web:a59bf3afc8176308ea8a01",
+  measurementId: "G-NQ8DFVNBN1"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+let kelasAktif = "";
+
+// AUTO LOGIN
+window.addEventListener("load", () => {
+  const kelasStored = localStorage.getItem("kelasAktif");
+  const pwStored = localStorage.getItem("pwAktif");
+  if(kelasStored && pwStored){
+    kelasAktif = kelasStored;
+    document.getElementById("setupBox").style.display = "none";
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("absenBox").style.display = "block";
+    loadTabel();
+  }
+});
+
+function simpanPassword(){
+  const kelas = document.getElementById("namaKelas").value;
+  const pw = document.getElementById("pwKelas").value;
+  if(!kelas || !pw) return alert("Isi dulu kelas & password!");
+  db.ref("kelas/"+kelas).set({ password: pw }).then(()=>{
+    alert("Password kelas berhasil dibuat!");
+    kelasAktif = kelas;
+    document.getElementById("setupBox").style.display = "none";
+    document.getElementById("loginBox").style.display = "block";
+  });
+}
+
+function loginKelas(){
+  const pwInput = document.getElementById("loginPw").value;
+  db.ref("kelas").once("value", snap=>{
+    let berhasil = false;
+    snap.forEach(child=>{
+      if(child.val().password === pwInput){
+        kelasAktif = child.key;
+        document.getElementById("setupBox").style.display = "none";
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("absenBox").style.display = "block";
+        localStorage.setItem("kelasAktif", kelasAktif);
+        localStorage.setItem("pwAktif", pwInput);
+        berhasil = true;
+        loadTabel();
+      }
+    });
+    if(!berhasil) alert("Password salah!");
+  });
+}
+
+function tambahMurid(){
+  const nama = document.getElementById("namaMuridBaru").value;
+  if(!nama) return alert("Isi nama dulu!");
+  db.ref(`kelas/${kelasAktif}/siswa/${nama}`).set({ nama:nama }).then(()=>{
+    document.getElementById("namaMuridBaru").value = "";
+    loadTabel();
+  });
+}
+
+function tambahAbsen() {  
+    const nama = document.getElementById("namaSiswaAbsenForm").value;  
+    const status = document.getElementById("statusAbsenForm").value;  
+    const bulan = document.getElementById("bulanSelect").value;  
+    const tanggal = new Date().getDate();  
+  
+    if(!nama) return alert("Pilih murid dulu!");  
+
+    // Simpan absen harian
+    db.ref(`kelas/${kelasAktif}/siswa/${nama}/absen/${bulan}/${tanggal}`).set({ status: status })
+    .then(() => {
+        // Update rekap bulanan permanen
+        updateRekapBulanan()
+        .then(() => {
+            // Load tabel harian dan rekap bulanan
+            loadTabel();           // tabel harian
+            loadRekapBulanan();    // tampil rekap bulanan
+            updateTidakMasuk();    // update list tidak hadir hari ini
+        });
+    });
+}
+
+function updateTidakMasuk() {
+    const bulan = document.getElementById("bulanSelect").value;
+    const tanggal = new Date().getDate();
+    let arrTidakMasuk = [];
+
+    db.ref(`kelas/${kelasAktif}/siswa`).once("value", snapshot => {
+        let totalMurid = snapshot.numChildren();
+        let processed = 0;
+
+        snapshot.forEach(child => {
+            const nama = child.key;
+            db.ref(`kelas/${kelasAktif}/siswa/${nama}/absen/${bulan}/${tanggal}`).once("value", absenSnap => {
+                const status = absenSnap.val() ? absenSnap.val().status : "Hadir";
+                if(status !== "Hadir") arrTidakMasuk.push(`${nama} - ${status}`);
+
+                processed++;
+                // Setelah semua murid dicek, update div
+                if(processed === totalMurid){
+                    document.getElementById("tidakMasuk").innerHTML = arrTidakMasuk.length 
+                        ? arrTidakMasuk.join("<br>") 
+                        : "Semua hadir hari ini!";
+                }
+            });
+        });
+    });
+}
+
+function loadTabel(){
+  const bulan = document.getElementById("bulanSelect").value;
+  db.ref(`kelas/${kelasAktif}/siswa`).once("value", snap=>{
+    let tabelHtml = "<table border='1' style='border-collapse: collapse; width:100%;'><tr><th>No</th><th>Nama</th>";
+    const tanggalMax = 31;
+    for(let i=1;i<=tanggalMax;i++) tabelHtml += `<th>${i}</th>`;
+    tabelHtml += "</tr>";
+
+    let no=1;
+    let namaOptions = "";
+    const semuaData = {}; // simpan sementara semua absen
+    snap.forEach(child=>{
+      const nama = child.key;
+      namaOptions += `<option value="${nama}">${nama}</option>`;
+      semuaData[nama] = {}; // object tanggal->status
+      tabelHtml += `<tr><td>${no}</td><td>${nama}</td>`;
+      for(let t=1;t<=tanggalMax;t++) tabelHtml += `<td id="${nama}-${t}"></td>`;
+      tabelHtml += "</tr>";
+      no++;
+    });
+
+    document.getElementById("tabelAbsen").innerHTML = tabelHtml;
+    document.getElementById("namaSiswaAbsenForm").innerHTML = namaOptions;
+
+    // ambil semua absen untuk bulan itu sekaligus
+    snap.forEach(child=>{
+      const nama = child.key;
+      db.ref(`kelas/${kelasAktif}/siswa/${nama}/absen/${bulan}`).once("value", absenSnap=>{
+        absenSnap.forEach(a=>{
+          const tgl = a.key;
+          const status = a.val().status;
+          const td = document.getElementById(`${nama}-${tgl}`);
+          if(td) td.innerText = status;
+        });
+      });
+    });
+  });
+}
+
+function loadRekapBulanan() {
+    const bulan = document.getElementById("bulanSelect").value;
+
+    db.ref(`kelas/${kelasAktif}/rekapBulanan/${bulan}`).once("value").then(snapshot => {
+        const data = snapshot.val();
+        let rekapHtml = "Nama | Hadir | Izin | Sakit | Alpa<br>";
+        rekapHtml += "------------------------------------<br>";
+
+        if(!data) {
+            document.getElementById("rekapBulanan").innerHTML = "Belum ada data rekap bulanan!";
+            return;
+        }
+
+        for(let nama in data) {
+            const hitung = data[nama];
+            rekapHtml += `${nama} | ${hitung.Hadir || 0} | ${hitung.Izin || 0} | ${hitung.Sakit || 0} | ${hitung.Alpa || 0}<br>`;
+        }
+
+        document.getElementById("rekapBulanan").innerHTML = rekapHtml;
+    });
+}
+
+
+function updateRekapBulanan() {
+    const bulan = document.getElementById("bulanSelect").value;
+
+    return db.ref(`kelas/${kelasAktif}/siswa`).once("value").then(snapshot => {
+        const promises = [];
+
+        snapshot.forEach(child => {
+            const nama = child.key;
+
+            const p = db.ref(`kelas/${kelasAktif}/siswa/${nama}/absen/${bulan}`).once("value")
+                .then(absenSnap => {
+                    let hitung = {Hadir:0, Izin:0, Sakit:0, Alpa:0};
+
+                    absenSnap.forEach(tanggal => {
+                        const status = tanggal.val().status;
+                        if(hitung[status] !== undefined) hitung[status]++;
+                    });
+
+                    // Simpan ke rekapBulanan permanen di Firebase
+                    return db.ref(`kelas/${kelasAktif}/rekapBulanan/${bulan}/${nama}`).set(hitung);
+                });
+
+            promises.push(p);
+        });
+
+        return Promise.all(promises);
+    });
+}
+
+function hadirSemua() {
+    const bulan = document.getElementById("bulanSelect").value;
+    const tanggalHariIni = new Date().getDate(); // cuma angka 1–31
+
+    db.ref(`kelas/${kelasAktif}/siswa`).once("value").then(snapshot => {
+
+        const promises = [];
+
+        snapshot.forEach(child => {
+            const nama = child.key;
+
+            // 1️⃣ Simpan ke Firebase
+            const p = db.ref(`kelas/${kelasAktif}/siswa/${nama}/absen/${bulan}/${tanggalHariIni}`)
+                .set({
+                    status: "Hadir",
+                    waktu: Date.now()
+                });
+
+            promises.push(p);
+
+            // 2️⃣ Update tabel langsung
+            const td = document.getElementById(`${nama}-${tanggalHariIni}`);
+            if (td) {
+                td.innerText = "Hadir";
+            }
+        });
+
+        Promise.all(promises).then(() => {
+            alert("Semua siswa ditandai Hadir!");
+            updateRekapBulanan(); // optional biar langsung update rekap
+        });
+
+    });
+}
+
+function resetBulanBaru(){
+  const bulan = document.getElementById("bulanSelect").value;
+  db.ref(`kelas/${kelasAktif}/siswa`).once("value", snap=>{
+    snap.forEach(child=>{
+      const nama = child.key;
+      db.ref(`kelas/${kelasAktif}/siswa/${nama}/absen/${bulan}`).remove();
+    });
+  }).then(()=>loadTabel());
+}
+
+function logoutKelas(){
+  localStorage.removeItem("kelasAktif");
+  localStorage.removeItem("pwAktif");
+  kelasAktif = "";
+  document.getElementById("absenBox").style.display = "none";
+  document.getElementById("loginBox").style.display = "block";
+}
+
 
 // Persen
 function calcPersen(){
@@ -438,10 +938,42 @@ let p=Number(document.getElementById('persenVal').value);
 let hasil = a*p/100;
 document.getElementById('hasilPersen').innerText = "Hasil = " + hasil;
 if(document.getElementById('modePersen').checked){
-document.getElementById('caraPersen').innerHTML = `Rumus: ${a} × ${p}% / 100<br>= ${hasil}`;
+document.getElementById('caraPersen').innerHTML = `Rumus Persen:<br>
+Persen menunjukkan perbandingan suatu nilai terhadap 100.<br>
+<br>
+Langkah-langkah:<br>
+1. Ubah persen menjadi pecahan dengan membagi 100<br>
+2. Kalikan hasil pecahan dengan angka yang diketahui<br>
+3. Hitung hasil akhirnya<br>
+<br>
+${p}% × ${a}<br>
+= (${p}/100) × ${a}<br>
+= ${hasil}
+`;
 }else{document.getElementById('caraPersen').innerHTML='';}
 }
 function resetPersen(){document.getElementById('angka').value='';document.getElementById('persenVal').value='';document.getElementById('hasilPersen').innerText='';document.getElementById('caraPersen').innerText='';}
+
+function copyPersen() {
+  let el = document.getElementById("hasilPersen");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
 
 // Volume
 function calcVolume(){
@@ -452,45 +984,175 @@ let t = Number(document.getElementById('tinggi').value);
 let hasil, cara='';
 if(b=="kubus"){
 hasil = s**3;
-cara = `Rumus: V = s × s × s<br>= ${s} × ${s} × ${s}<br>= ${hasil}`;
+cara = `Rumus Kubus:<br>
+Volume kubus adalah isi dari bangun ruang berbentuk kubus.<br>
+<br>
+Langkah-langkah:<br>
+1. Tentukan panjang sisi kubus (s)<br>
+2. Gunakan rumus: V = s³<br>
+3. Masukkan nilai sisi ke rumus<br>
+4. Hitung hasil volume kubus<br>
+<br>
+= ${s} × ${s} × ${s}<br>= ${hasil}`;
 }else{
 hasil = s*l*t;
-cara = `Rumus: V = p × l × t<br>= ${s} × ${l} × ${t}<br>= ${hasil}`;
+cara = `Rumus Balok:<br>
+Volume balok adalah isi dari bangun ruang berbentuk balok.<br>
+<br>
+Langkah-langkah:<br>
+1. Tentukan panjang (p), lebar (l), dan tinggi (t)<br>
+2. Gunakan rumus: V = p × l × t<br>
+3. Masukkan semua nilai ke rumus<br>
+4. Hitung hasil volume balok<br>
+<br>
+= ${s} × ${l} × ${t}<br>= ${hasil}`;
 }
 document.getElementById('hasilVolume').innerText="Hasil = "+hasil;
 document.getElementById('caraVolume').innerHTML = document.getElementById('modeVolume').checked?cara:'';
 }
 function resetVolume(){document.getElementById('sisi').value='';document.getElementById('lebar').value='';document.getElementById('tinggi').value='';document.getElementById('hasilVolume').innerText='';document.getElementById('caraVolume').innerText='';}
 
+function copyVolume() {
+  let el = document.getElementById("hasilVolume");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
+
 // Satuan
 function calcSatuan(){
 let m=Number(document.getElementById('m').value);
 let hasil = `${m*100} cm | ${m*1000} mm | ${m/1000} km`;
 document.getElementById('hasilSatuan').innerText="Hasil = "+hasil;
-let cara = `Rumus: cm = m × 100, mm = m × 1000, km = m ÷ 1000<br>= ${m} m → ${m*100} cm, ${m*1000} mm, ${m/1000} km`;
+let cara = `Rumus Satuan:<br>
+Konversi satuan digunakan untuk mengubah suatu nilai ke satuan lain yang setara.<br>
+<br>
+Langkah-langkah:<br>
+1. Tentukan nilai awal dan satuan asal<br>
+2. Tentukan satuan tujuan<br>
+3. Tentukan faktor konversi yang sesuai<br>
+4. Kalikan atau bagi nilai dengan faktor konversi<br>
+5. Dapatkan hasil konversi<br>
+<br>
+= ${m} m → ${m*100} cm, ${m*1000} mm, ${m/1000} km`;
 document.getElementById('caraSatuan').innerHTML = document.getElementById('modeSatuan').checked?cara:'';
 }
 function resetSatuan(){document.getElementById('m').value='';document.getElementById('hasilSatuan').innerText='';document.getElementById('caraSatuan').innerText='';}
+
+function copySatuan() {
+  let el = document.getElementById("hasilSatuan");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
 
 // Nilai
 function calcNilai(){
 let n=Number(document.getElementById('n').value);
 let hasil = n>=85?'A':n>=75?'B':n>=65?'C':'D';
 document.getElementById('hasilNilai').innerText="Hasil = "+hasil;
-let cara = `Rumus: ≥85=A, ≥75=B, ≥65=C, <65=D<br>Input: ${n} → Nilai: ${hasil}`;
+let cara = `Rumus Nilai:<br>
+Konversi nilai digunakan untuk mengubah nilai angka menjadi predikat tertentu.<br>
+<br>
+Langkah-langkah:<br>
+1. Masukkan nilai angka<br>
+2. Cocokkan nilai dengan rentang yang tersedia<br>
+3. Tentukan predikat nilai<br>
+4. Tampilkan hasil konversi nilai<br>
+<br>
+Input: ${n} → Nilai: ${hasil}`;
 document.getElementById('caraNilai').innerHTML = document.getElementById('modeNilai').checked?cara:'';
 }
 function resetNilai(){document.getElementById('n').value='';document.getElementById('hasilNilai').innerText='';document.getElementById('caraNilai').innerText='';}
+
+function copyNilai() {
+  let el = document.getElementById("hasilNilai");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
 
 // Rata-rata
 function calcRata(){
 let arr=document.getElementById('arr').value.split(',').map(Number);
 let hasil=(arr.reduce((x,y)=>x+y,0)/arr.length).toFixed(2);
 document.getElementById('hasilRata').innerText="Hasil = "+hasil;
-let cara = `Rata-rata = jumlah nilai ÷ banyak data<br>= (${arr.join('+')}) ÷ ${arr.length}<br>= ${hasil}`;
+let cara = `Rumus Rata Rata:<br>
+Rata-rata digunakan untuk mengetahui nilai tengah dari beberapa data.<br>
+<br>
+Langkah-langkah:<br>
+1. Jumlahkan seluruh data<br>
+2. Hitung banyaknya data<br>
+3. Bagi jumlah data dengan banyak data<br>
+4. Dapatkan nilai rata-ratanya<br>
+<br>
+= (${arr.join('+')}) ÷ ${arr.length}<br>= ${hasil}`;
 document.getElementById('caraRata').innerHTML = document.getElementById('modeRata').checked?cara:'';
 }
 function resetRata(){document.getElementById('arr').value='';document.getElementById('hasilRata').innerText='';document.getElementById('caraRata').innerText='';}
+
+function copyRata() {
+  let el = document.getElementById("hasilRata");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
 
 // Trigonometri
 function calcTrigo(){
@@ -499,7 +1161,20 @@ let tabel={0:["0","1","0"],30:["1/2","1/2√3","1/3√3"],45:["1/2√2","1/2√2
 let hasil, cara='';
 if(tabel[d]){
 hasil=`sin ${d}°=${tabel[d][0]}, cos=${tabel[d][1]}, tan=${tabel[d][2]}`;
-cara=`Rumus: sin=${tabel[d][0]}, cos=${tabel[d][1]}, tan=${tabel[d][2]}`;
+cara=`Rumus Trigonometri:<br>
+Trigonometri adalah hubungan antara sudut dan sisi segitiga siku-siku.<br>
+<br>
+Langkah-langkah:<br>
+1. Tentukan sudut yang diketahui<br>
+2. Tentukan sisi yang ingin dicari<br>
+3. Pilih rumus yang sesuai:<br>
+   - sin = depan / miring<br>
+   - cos = samping / miring<br>
+   - tan = depan / samping<br>
+4. Masukkan nilai ke rumus<br>
+5. Hitung hasil akhirnya<br>
+<br>
+sin=${tabel[d][0]}, cos=${tabel[d][1]}, tan=${tabel[d][2]}`;
 }else{
 let r=d*Math.PI/180;
 hasil=`sin=${Math.sin(r).toFixed(4)}, cos=${Math.cos(r).toFixed(4)}, tan=${Math.tan(r).toFixed(4)}`;
@@ -512,75 +1187,435 @@ document.getElementById('caraTrigo').innerHTML=document.getElementById('modeTrig
 }
 function resetTrigo(){document.getElementById('deg').value='';document.getElementById('hasilTrigo').innerText='';document.getElementById('caraTrigo').innerText='';}
 
+function copyTrigo() {
+  let el = document.getElementById("hasilTrigo");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
+
 // Peluang
 function calcPeluang(){
 let a=Number(document.getElementById('a').value);
 let b=Number(document.getElementById('b').value);
 let hasil=(a/b*100).toFixed(2)+'%';
 document.getElementById('hasilPeluang').innerText="Hasil = "+hasil;
-let cara=`Rumus: P = kejadian ÷ total kemungkinan<br>= ${a} ÷ ${b} = ${hasil}`;
+let cara=`Rumus Peluang:<br>
+Peluang digunakan untuk mengetahui kemungkinan suatu kejadian.<br>
+<br>
+Langkah-langkah:<br>
+1. Tentukan jumlah kejadian yang diinginkan<br>
+2. Tentukan jumlah seluruh kejadian<br>
+3. Gunakan rumus:<br>
+   Peluang = kejadian / total kejadian<br>
+4. Hitung hasil peluangnya<br>
+<br>
+= ${a} ÷ ${b} = ${hasil}`;
 document.getElementById('caraPeluang').innerHTML=document.getElementById('modePeluang').checked?cara:'';
 }
 function resetPeluang(){document.getElementById('a').value='';document.getElementById('b').value='';document.getElementById('hasilPeluang').innerText='';document.getElementById('caraPeluang').innerText='';}
 
+function copyPeluang() {
+  let el = document.getElementById("hasilPeluang");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
+
 //Linear
-function hitungLinear(){
-let a1 = Number(document.getElementById("a1").value);
-let b1 = Number(document.getElementById("b1").value);
-let c1 = Number(document.getElementById("c1").value);
-let d1 = Number(document.getElementById("d1").value);
+function showLinear(){
+ document.querySelectorAll('.card').forEach(c=>c.style.display='none');
+ document.getElementById("linearCard").style.display="block";
+}
 
-let a2 = Number(document.getElementById("a2").value);
-let b2 = Number(document.getElementById("b2").value);
-let c2 = Number(document.getElementById("c2").value);
-let d2 = Number(document.getElementById("d2").value);
+function showLinear2(){
+document.getElementById("formLinear").innerHTML=`
+<h3>Persamaan Pertama</h3>
 
-let a3 = Number(document.getElementById("a3").value);
-let b3 = Number(document.getElementById("b3").value);
-let c3 = Number(document.getElementById("c3").value);
-let d3 = Number(document.getElementById("d3").value);
+<input id="a1" placeholder="X">
+<input id="b1" placeholder="Y">
+<input id="d1" placeholder="Total">
 
-// determinan
-let D = a1*(b2*c3-b3*c2)-b1*(a2*c3-a3*c2)+c1*(a2*b3-a3*b2);
-let Dx = d1*(b2*c3-b3*c2)-b1*(d2*c3-d3*c2)+c1*(d2*b3-d3*b2);
-let Dy = a1*(d2*c3-d3*c2)-d1*(a2*c3-a3*c2)+c1*(a2*d3-a3*d2);
-let Dz = a1*(b2*d3-b3*d2)-b1*(a2*d3-a3*d2)+d1*(a2*b3-a3*b2);
+<h3>Persamaan Kedua</h3>
+
+<input id="a2" placeholder="X">
+<input id="b2" placeholder="Y">
+<input id="d2" placeholder="Total">
+
+<div class="label-checkbox">Tampilkan Cara
+<input type="checkbox" id="modeLinear">
+</div>
+
+<button onclick="hitungLinear2()">Hitung</button>
+`;
+
+hasil.innerHTML="";
+cara.innerHTML="";
+}
+
+function showLinear3(){
+document.getElementById("formLinear").innerHTML=`
+<h3>Persamaan Pertama</h3>
+
+<input id="a1" placeholder="X">
+<input id="b1" placeholder="Y">
+<input id="c1" placeholder="Z">
+<input id="d1" placeholder="Total">
+
+<h3>Persamaan Kedua</h3>
+
+<input id="a2" placeholder="X">
+<input id="b2" placeholder="Y">
+<input id="c2" placeholder="Z">
+<input id="d2" placeholder="Total">
+
+<h3>Persamaan Ketiga</h3>
+
+<input id="a3" placeholder="X">
+<input id="b3" placeholder="Y">
+<input id="c3" placeholder="Z">
+<input id="d3" placeholder="Total">
+
+<div class="label-checkbox">Tampilkan Cara
+<input type="checkbox" id="modeLinear">
+</div>
+
+<button onclick="hitungLinear3()">Hitung</button>
+`;
+
+hasil.innerHTML="";
+cara.innerHTML="";
+}
+
+function hitungLinear2(){
+
+let a1=+document.getElementById("a1").value;
+let b1=+document.getElementById("b1").value;
+let d1=+document.getElementById("d1").value;
+
+let a2=+document.getElementById("a2").value;
+let b2=+document.getElementById("b2").value;
+let d2=+document.getElementById("d2").value;
+
+let D=a1*b2-a2*b1;
 
 if(D==0){
-alert("Tidak punya solusi unik");
+hasil.innerHTML="Tidak ada solusi 😅";
+cara.innerHTML="";
 return;
 }
 
-let x = (Dx/D)/1000;
-let y = (Dy/D)/1000;
-let z = (Dz/D)/1000;
+let Dx=d1*b2-d2*b1;
+let Dy=a1*d2-a2*d1;
 
-document.getElementById("hasilLinear").innerText =
-"X = "+x.toFixed(2)+" | Y = "+y.toFixed(2)+" | Z = "+z.toFixed(2);
+let x=(Dx/D).toFixed(3);
+let y=(Dy/D).toFixed(3);
+
+hasil.innerHTML=`Hasil:<br>X = ${x}<br>Y = ${y}`;
 
 if(document.getElementById("modeLinear").checked){
+cara.innerHTML=`Rumus Linear 2:<br>
+Persamaan linear 2 variabel dapat diselesaikan dengan metode eliminasi atau substitusi.<br>
+<br>
+Langkah-langkah:<br>
+1. Samakan salah satu koefisien variabel<br>
+2. Kurangkan atau jumlahkan kedua persamaan<br>
+3. Dapatkan nilai salah satu variabel<br>
+4. Substitusikan ke persamaan lain<br>
+5. Dapatkan nilai variabel kedua<br>
+<br>
+D = a1×b2 − a2×b1 = ${D}<br>
+Dx = d1×b2 − d2×b1 = ${Dx}<br>
+Dy = a1×d2 − a2×d1 = ${Dy}<br><br>
 
-document.getElementById("caraLinear").innerHTML =
-"Langkah 1: Eliminasi Z<br>"+
-"Langkah 2: Eliminasi Y<br>"+
-"Langkah 3: Substitusi<br><br>"+
-"X = "+x.toFixed(2)+"<br>"+
-"Y = "+y.toFixed(2)+"<br>"+
-"Z = "+z.toFixed(2);
-
+X = Dx/D = ${x}<br>
+Y = Dy/D = ${y}
+`;
+}else{
+cara.innerHTML="";
 }
 
 }
 
-function resetLinear(){
+function hitungLinear3(){
 
-["a1","b1","c1","d1","a2","b2","c2","d2","a3","b3","c3","d3"]
-.forEach(id=>document.getElementById(id).value="");
+let a1=+document.getElementById("a1").value;
+let b1=+document.getElementById("b1").value;
+let c1=+document.getElementById("c1").value;
+let d1=+document.getElementById("d1").value;
 
-document.getElementById("hasilLinear").innerText="";
-document.getElementById("caraLinear").innerHTML="";
-document.getElementById("modeLinear").checked=false;
+let a2=+document.getElementById("a2").value;
+let b2=+document.getElementById("b2").value;
+let c2=+document.getElementById("c2").value;
+let d2=+document.getElementById("d2").value;
 
+let a3=+document.getElementById("a3").value;
+let b3=+document.getElementById("b3").value;
+let c3=+document.getElementById("c3").value;
+let d3=+document.getElementById("d3").value;
+
+let D =
+a1*(b2*c3-b3*c2) -
+b1*(a2*c3-a3*c2) +
+c1*(a2*b3-a3*b2);
+
+if(D==0){
+hasil.innerHTML="Tidak ada solusi 😅";
+cara.innerHTML="";
+return;
+}
+
+let Dx =
+d1*(b2*c3-b3*c2) -
+b1*(d2*c3-d3*c2) +
+c1*(d2*b3-d3*b2);
+
+let Dy =
+a1*(d2*c3-d3*c2) -
+d1*(a2*c3-a3*c2) +
+c1*(a2*d3-a3*d2);
+
+let Dz =
+a1*(b2*d3-b3*d2) -
+b1*(a2*d3-a3*d2) +
+d1*(a2*b3-a3*b2);
+
+let x = (Dx/D).toFixed(3);
+let y = (Dy/D).toFixed(3);
+let z = (Dz/D).toFixed(3);
+
+hasil.innerHTML = `Hasil:<br>X = ${x}<br>Y = ${y}<br>Z = ${z}`;
+
+if(document.getElementById("modeLinear").checked){
+cara.innerHTML=`Rumus Linear 3:<br>
+Persamaan linear 3 variabel diselesaikan menggunakan aturan Cramer.<br>
+<br>
+Langkah-langkah:<br>
+1. Susun persamaan ke bentuk matriks<br>
+2. Hitung determinan utama (D)<br>
+3. Hitung Dx dengan mengganti kolom X<br>
+4. Hitung Dy dengan mengganti kolom Y<br>
+5. Hitung Dz dengan mengganti kolom Z<br>
+<br>
+X = Dx/D<br>
+Y = Dy/D<br>
+Z = Dz/D
+`;
+}else{
+cara.innerHTML="";
+}
+
+}
+
+function resetformLinear(){
+  document.getElementById("formLinear").innerHTML="";
+  document.getElementById("hasil").innerHTML="";
+  document.getElementById("cara").innerHTML="";
+}
+
+
+function copyformLinear() {
+  let el = document.getElementById("hasil");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
+
+//Pertidaksamaan Linear
+function showPertidaksamaan(){
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display = "none";
+  });
+  document.getElementById("pertidaksamaanCard").style.display = "block";
+}
+
+function showPertidaksamaan2(){
+  document.getElementById("formPertidaksamaan").innerHTML = `
+  <h3>Pertidaksamaan Linear 2 Variabel</h3>
+
+  <input id="pa1" placeholder="Koefisien X">
+  <input id="pb1" placeholder="Koefisien Y">
+
+  <select id="ptanda">
+    <option value="<"><</option>
+    <option value="<=">≤</option>
+    <option value=">">></option>
+    <option value=">=">≥</option>
+  </select>
+
+  <input id="pd1" placeholder="Nilai">
+
+  <div class="label-checkbox">
+    Tampilkan Cara
+    <input type="checkbox" id="modeP">
+  </div>
+
+  <button onclick="hitungPertidaksamaan()">Hitung</button>
+  `;
+  
+  phasil.innerHTML="";
+  pcara.innerHTML="";
+}
+
+function hitungPertidaksamaan(){
+  let a = +pa1.value;
+  let b = +pb1.value;
+  let d = +pd1.value;
+  let tanda = ptanda.value;
+
+  phasil.innerHTML = `
+  Hasil:<br>
+  ${a}X + ${b}Y ${tanda} ${d}
+  `;
+
+  if(document.getElementById("modeP").checked){
+    pcara.innerHTML = `Rumus Pertidaksamaan Linear:<br>
+    Pertidaksamaan linear menentukan daerah penyelesaian suatu masalah.<br>
+<br>
+Langkah-langkah:<br>
+1. Ubah pertidaksamaan menjadi persamaan garis<br>
+2. Tentukan garis batas pada grafik<br>
+3. Tentukan tanda (<, >, ≤, ≥)<br>
+4. Ambil satu titik uji<br>
+5. Tentukan daerah yang memenuhi pertidaksamaan<br>
+<br>
+    Substitusi nilai:<br>
+    ${a}X + ${b}Y ${tanda} ${d}
+    `;
+  }else{
+    pcara.innerHTML="";
+  }
+}
+
+function resetPertidaksamaan(){
+  formPertidaksamaan.innerHTML="";
+  phasil.innerHTML="";
+  pcara.innerHTML="";
+}
+
+function copyPertidaksamaan() {
+  let el = document.getElementById("phasil");
+  let text = el.innerText || el.textContent;
+
+  if(!text || text.trim() === ""){
+    alert("Belum ada hasil buat dicopy bre 😅");
+    return;
+  }
+
+  let temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  temp.setSelectionRange(0,99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Hasil berhasil dicopy ✅");
+}
+
+function setPage(mode){
+
+  // sembunyikan SEMUA card dulu
+  document.querySelectorAll('.card')
+    .forEach(card => card.style.display = "none");
+
+  // sembunyikan guru & murid dulu
+  document.getElementById('guru').style.display = "none";
+  document.getElementById('murid').style.display = "none";
+
+  // tampilkan sesuai pilihan
+  if(mode === 'guru'){
+    document.getElementById('guru').style.display = "block";
+  }
+
+  if(mode === 'murid'){
+    document.getElementById('murid').style.display = "block";
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const guru = document.getElementById('guru');
+  const murid = document.getElementById('murid');
+  const pilihMode = document.getElementById('pilihMode');
+
+  document.getElementById('btnGuru').addEventListener('click', () => {
+    guru.style.display = 'block';
+    murid.style.display = 'none';
+    pilihMode.style.display = 'none';
+  });
+
+  document.getElementById('btnMurid').addEventListener('click', () => {
+    murid.style.display = 'block';
+    guru.style.display = 'none';
+    pilihMode.style.display = 'none';
+  });
+});
+
+function showCard(id){
+
+  // sembunyikan semua card di seluruh web
+  document.querySelectorAll('.card')
+    .forEach(card => card.style.display = "none");
+
+  // tampilkan card yang dipilih
+  const target = document.getElementById(id);
+  if(target){
+    target.style.display = "block";
+  }
+}
+
+// Kembali ke Pilih Mode
+function backToMode(){
+
+  document.querySelectorAll('.card')
+    .forEach(card => card.style.display = "none");
+
+  document.getElementById('guru').style.display = "none";
+  document.getElementById('murid').style.display = "none";
+  document.getElementById('pilihMode').style.display = "block";
 }
 
 </script>
